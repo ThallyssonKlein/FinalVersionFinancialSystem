@@ -1,7 +1,7 @@
-package com.example.rules_engine;
+package com.expending.rules_engine.domain;
 
-import com.example.rules_engine.config.Frequency;
-import com.example.rules_engine.transaction.Transaction;
+import com.expending.rules_engine.domain.config.bo.Frequency;
+import com.expending.rules_engine.domain.transaction.bo.Transaction;
 
 import java.util.List;
 

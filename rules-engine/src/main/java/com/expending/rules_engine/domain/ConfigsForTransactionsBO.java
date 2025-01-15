@@ -1,6 +1,6 @@
-package com.example.rules_engine;
+package com.expending.rules_engine.domain;
 
-import com.example.rules_engine.config.Config;
+import com.expending.rules_engine.domain.config.Config;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.example.rules_engine.config;
+package com.expending.rules_engine.domain.config;
 
 public enum Unity {
     DAY,

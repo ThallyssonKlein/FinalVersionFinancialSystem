@@ -1,6 +1,6 @@
-package com.example.rules_engine;
+package com.expending.rules_engine.domain;
 
-import com.example.rules_engine.transaction.Transaction;
+import com.expending.rules_engine.domain.transaction.Transaction;
 import lombok.Getter;
 import lombok.Setter;
 

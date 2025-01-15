@@ -1,13 +1,14 @@
-package com.example.rules_engine;
+package com.expending.rules_engine.domain;
 
-import com.example.rules_engine.config.Between;
-import com.example.rules_engine.config.Config;
-import com.example.rules_engine.config.Rule;
-import com.example.rules_engine.transaction.Transaction;
+import com.expending.rules_engine.domain.config.Between;
+import com.expending.rules_engine.domain.config.Config;
+import com.expending.rules_engine.domain.config.Rule;
+import com.expending.rules_engine.domain.transaction.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
@@ -29,10 +30,12 @@ class ContainsResult {
     private String queryToSearchTheFrequencyNumber;
 }
 
-@RequiredArgsConstructor
-public class TransactionService {
+@Service
+public class ConfigService {
     private static final SimpleDateFormat FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
-    private final TransactionRepository transactionRepository;
+
+    @Autowired
+    private TransactionRepository transactionRepository;
 
     public Object getFieldValue(Object obj, String fieldName) {
         try {
@@ -64,10 +67,10 @@ public class TransactionService {
 
     private ContainsResult validateContains(Rule rule, Transaction transaction, boolean shouldReturnConfig, String queryToSearchTheFrequencyNumber) {
         if (rule.getProperty() != null && rule.getContains() != null) {
-            if (rule.getContains() instanceof  String) {
+            if (rule.getContains() instanceof String) {
                 if (this.getFieldValue(transaction, rule.getProperty()).toString().contains((String) rule.getContains())) {
                     shouldReturnConfig = true;
-                    queryToSearchTheFrequencyNumber += TransactionService.camelToSnake(rule.getProperty()) + " LIKE '%" + rule.getContains() + "%'";
+                    queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " LIKE '%" + rule.getContains() + "%'";
                 } else {
                     shouldReturnConfig = false;
                 }
@@ -76,7 +79,7 @@ public class TransactionService {
                 for (String contains: containsList) {
                     if (this.getFieldValue(transaction, rule.getProperty()).toString().contains(contains)) {
                         shouldReturnConfig = true;
-                        queryToSearchTheFrequencyNumber += TransactionService.camelToSnake(rule.getProperty()) + " LIKE '%" + contains + "%' AND";
+                        queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " LIKE '%" + contains + "%' AND";
                     } else {
                         shouldReturnConfig = false;
                     }
@@ -95,7 +98,7 @@ public class TransactionService {
                             && (Integer) field < (Integer) between.getValue2()) {
                         shouldReturnConfig = true;
                         if (!usingCalculatedField) {
-                            queryToSearchTheFrequencyNumber += TransactionService.camelToSnake(rule.getProperty()) + " BETWEEN " + between.getValue1() + " AND " + between.getValue2();
+                            queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " BETWEEN " + between.getValue1() + " AND " + between.getValue2();
                         }
                     } else {
                         shouldReturnConfig = false;
@@ -106,7 +109,7 @@ public class TransactionService {
                             && ((Date) field).before((Date) between.getValue2())) {
                         shouldReturnConfig = true;
                         if (!usingCalculatedField) {
-                            queryToSearchTheFrequencyNumber += TransactionService.camelToSnake(rule.getProperty()) + " BETWEEN " + FORMATTER.format(between.getValue1()) + " AND " + FORMATTER.format(between.getValue2());
+                            queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " BETWEEN " + FORMATTER.format(between.getValue1()) + " AND " + FORMATTER.format(between.getValue2());
                         }
                     } else {
                         shouldReturnConfig = false;
@@ -176,11 +179,11 @@ public class TransactionService {
         return shouldReturnConfig;
     }
 
-    public ConfigsForTransactionsReturn getConfigsForTransactions(Config defaultConfig, List<Config> configs,
-                                                                  List<Transaction> transactions,
-                                                                  TransactionsGroupedByDate transactionsGroupedByDate) {
+    public ConfigsForTransactionsBO determineConfigsForTransactions(Config defaultConfig, List<Config> configs,
+                                                              List<Transaction> transactions,
+                                                              TransactionsGroupedByDateBO transactionsGroupedByDateBO) {
         Map<String, Config> configMap = new HashMap<>();
-        List<Pair> pairs = new ArrayList<>();
+        List<PairBO> pairBOS = new ArrayList<>();
         for (Transaction transaction: transactions) {
             boolean puttedInTheMapOrPair = false;
             for (Config config: configs) {
@@ -188,11 +191,11 @@ public class TransactionService {
                 if (isThisConfigCorrectForThisTransaction) {
                     if (config.getFindPair() != null) {
                         Date currentDate = transaction.getDate();
-                        if (transactionsGroupedByDate.getDates().contains(TransactionService.FORMATTER.format(currentDate))) {
-                            for (Transaction pair : transactionsGroupedByDate.getTransactions()) {
+                        if (transactionsGroupedByDateBO.getDates().contains(ConfigService.FORMATTER.format(currentDate))) {
+                            for (Transaction pair : transactionsGroupedByDateBO.getTransactions()) {
                                 boolean isThisConfigCorrectForThisTransactionPair = this.isConfigForThisTransaction(config, pair);
                                 if (isThisConfigCorrectForThisTransactionPair) {
-                                    pairs.add(new Pair(
+                                    pairBOS.add(new PairBO(
                                             config.getFindPair().getPairName(),
                                             config.getId(),
                                             new String[]{transaction.getId(), pair.getId()}
@@ -213,9 +216,9 @@ public class TransactionService {
             }
         }
 
-        return new ConfigsForTransactionsReturn(
+        return new ConfigsForTransactionsBO(
             configMap,
-            pairs
+                pairBOS
         );
     }
 }

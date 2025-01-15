@@ -1,4 +1,4 @@
-package com.example.rules_engine.config;
+package com.expending.rules_engine.domain.config;
 
 import java.math.BigDecimal;
 import java.util.Date;
