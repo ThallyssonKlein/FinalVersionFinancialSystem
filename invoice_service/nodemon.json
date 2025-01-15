@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "exec": "yarn build && node ./dist/ports/inbound/http/index.js",
+  "ignore": ["src/__tests__/**"]
+}

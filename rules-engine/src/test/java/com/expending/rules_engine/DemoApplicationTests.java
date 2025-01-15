@@ -1,4 +1,4 @@
-package com.example.rules_engine;
+package com.expending.rules_engine;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

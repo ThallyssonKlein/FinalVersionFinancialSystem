@@ -1,9 +1,13 @@
-package com.expending.rules_engine.domain;
+package com.expending.rules_engine.domain.config;
 
-import com.expending.rules_engine.domain.config.Between;
-import com.expending.rules_engine.domain.config.Config;
-import com.expending.rules_engine.domain.config.Rule;
-import com.expending.rules_engine.domain.transaction.Transaction;
+import com.expending.rules_engine.domain.ConfigsForTransactionsBO;
+import com.expending.rules_engine.domain.PairBO;
+import com.expending.rules_engine.ports.outbound.database.SavedTransactionsRepository;
+import com.expending.rules_engine.domain.TransactionsGroupedByDateBO;
+import com.expending.rules_engine.domain.config.bo.Between;
+import com.expending.rules_engine.domain.config.bo.Config;
+import com.expending.rules_engine.domain.config.bo.Rule;
+import com.expending.rules_engine.domain.transaction.bo.Transaction;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,7 +39,7 @@ public class ConfigService {
     private static final SimpleDateFormat FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
 
     @Autowired
-    private TransactionRepository transactionRepository;
+    private SavedTransactionsRepository savedTransactionsRepository;
 
     public Object getFieldValue(Object obj, String fieldName) {
         try {
@@ -155,7 +159,7 @@ public class ConfigService {
             }
 
             if (rule.getFrequency() != null) {
-                List<Transaction> transactionsFrequency = this.transactionRepository.findTransactionsInLastXFrequencyX(rule.getFrequency());
+                List<Transaction> transactionsFrequency = this.savedTransactionsRepository.findTransactionsInLastXFrequencyX(rule.getFrequency());
                 boolean isThisConfigCorrectForThisTransactionFrequency = false;
                 int searchedNumbers = 0;
                 for (Transaction transactionFrequency : transactionsFrequency) {
@@ -180,8 +184,8 @@ public class ConfigService {
     }
 
     public ConfigsForTransactionsBO determineConfigsForTransactions(Config defaultConfig, List<Config> configs,
-                                                              List<Transaction> transactions,
-                                                              TransactionsGroupedByDateBO transactionsGroupedByDateBO) {
+                                                                    List<Transaction> transactions,
+                                                                    TransactionsGroupedByDateBO transactionsGroupedByDateBO) {
         Map<String, Config> configMap = new HashMap<>();
         List<PairBO> pairBOS = new ArrayList<>();
         for (Transaction transaction: transactions) {

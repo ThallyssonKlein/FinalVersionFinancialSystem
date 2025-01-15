@@ -1,11 +1,11 @@
-package com.expending.rules_engine.domain;
+package com.expending.rules_engine.ports.outbound.database;
 
 import com.expending.rules_engine.domain.config.bo.Frequency;
 import com.expending.rules_engine.domain.transaction.bo.Transaction;
 
 import java.util.List;
 
-public class TransactionRepository {
+public class SavedTransactionsRepository {
     public List<Transaction> findTransactionsInLastXFrequencyX(Frequency frequency) {
         String query = "SELECT * FROM transactions WHERE date ";
 
