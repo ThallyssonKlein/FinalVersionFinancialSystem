@@ -3,6 +3,7 @@ package com.expending.rules_engine.domain;
 import com.expending.rules_engine.domain.transaction.bo.Transaction;
 import lombok.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -11,7 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 public class TransactionsGroupedByDateBO {
-    private List<String> dates;
-    private String date;
+    private Date date;
     private List<Transaction> transactions;
 }

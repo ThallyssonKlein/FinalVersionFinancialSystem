@@ -10,8 +10,9 @@ import java.util.List;
 public class Config {
     private Long id;
     private String name;
-    private UseInCalculation useInCalculation;
+    private UseCalculated useCalculated;
     private Display display;
     private List<Rule> rules;
     private FindPair findPair;
+    private Use use;
 }

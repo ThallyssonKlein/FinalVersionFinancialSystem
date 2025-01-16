@@ -4,5 +4,5 @@ import java.math.BigDecimal;
 
 public class Time {
     private BigDecimal value;
-    private String unit;
+    private Unity unit;
 }

@@ -18,9 +18,9 @@ public class Rule{
     private Object equals;
     private Frequency frequency;
 
-    public void setuseInCalculation(String useInCalculationValue, UseInCalculation useInCalculation) {
+    public void setuseInCalculation(String useInCalculationValue, UseCalculated useCalculated) {
         try {
-            Field field = useInCalculation.getClass().getDeclaredField(useInCalculationValue);
+            Field field = useCalculated.getClass().getDeclaredField(useInCalculationValue);
             if (field != null) {
                 this.useInCalculation = useInCalculationValue;
             } else {

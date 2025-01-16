@@ -133,8 +133,8 @@ public class ConfigService {
 
         boolean shouldReturnConfig = false;
         for (Rule rule : config.getRules()) {
-            if (config.getUseInCalculation() != null) {
-                Object usedInCalculationFieldValue = this.getFieldValue(config.getUseInCalculation(), rule.getUseInCalculation()) != null;
+            if (config.getUseCalculated() != null) {
+                Object usedInCalculationFieldValue = this.getFieldValue(config.getUseCalculated(), rule.getUseInCalculation()) != null;
                 Between<?> between = this.createBetweenInstance(rule.getType().name(), rule.getBetween().getValue1(), rule.getBetween().getValue2());
                 BeteweenResult betweenResult = validateBetween(between, rule, usedInCalculationFieldValue, shouldReturnConfig, true, queryToSearchTheFrequencyNumber);
                 shouldReturnConfig = betweenResult.isShouldReturnConfig();
@@ -163,9 +163,9 @@ public class ConfigService {
                 boolean isThisConfigCorrectForThisTransactionFrequency = false;
                 int searchedNumbers = 0;
                 for (Transaction transactionFrequency : transactionsFrequency) {
-                    if (rule.getFrequency().getNumber() > 0 && searchedNumbers == rule.getFrequency().getNumber()) {
+                    if (rule.getFrequency().getTargetNumber() > 0 && searchedNumbers == rule.getFrequency().getTargetNumber()) {
                         isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(config, transactionFrequency);
-                    } else if (rule.getFrequency().getNumber() == 0) {
+                    } else if (rule.getFrequency().getTargetNumber() == 0) {
                         isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(config, transactionFrequency);
                         break;
                     }
@@ -195,7 +195,7 @@ public class ConfigService {
                 if (isThisConfigCorrectForThisTransaction) {
                     if (config.getFindPair() != null) {
                         Date currentDate = transaction.getDate();
-                        if (transactionsGroupedByDateBO.getDates().contains(ConfigService.FORMATTER.format(currentDate))) {
+                        if (transactionsGroupedByDateBO.getDate().equals(currentDate)) {
                             for (Transaction pair : transactionsGroupedByDateBO.getTransactions()) {
                                 boolean isThisConfigCorrectForThisTransactionPair = this.isConfigForThisTransaction(config, pair);
                                 if (isThisConfigCorrectForThisTransactionPair) {

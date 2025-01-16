@@ -5,8 +5,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Frequency {
-    private Integer value;
-    private Unity unity;
-    private Integer targetNumber;
+public class Use {
+    private String category;
+    private String subcategory;
+    private String defaultName;
 }
