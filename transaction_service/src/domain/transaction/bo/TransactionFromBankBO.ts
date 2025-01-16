@@ -16,7 +16,6 @@ export default class TransactionFromBankBO {
         private date: Date,
         private user_token: string,
         private id?: string,
-        private custom_name?: string
     ) {}
 
     getId(): string {
@@ -43,10 +42,6 @@ export default class TransactionFromBankBO {
         return this.user_token;
     }
 
-    getCustonName(): string {
-        return this.custom_name;
-    }
-
     setId(id: string): void {
         this.id = id;
     }
@@ -69,9 +64,5 @@ export default class TransactionFromBankBO {
 
     setUserToken(user_token: string): void {
         this.user_token = user_token;
-    }
-
-    setCustomName(custom_name: string): void {
-        this.custom_name = custom_name;
     }
 }

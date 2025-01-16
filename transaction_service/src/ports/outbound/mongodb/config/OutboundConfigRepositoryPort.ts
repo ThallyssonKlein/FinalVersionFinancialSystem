@@ -1,52 +1,48 @@
 import { Schema, model } from 'mongoose';
 import { ConfigBO, Unity } from '../../../../domain/config/ConfigBO';
+import IToken from '@ports/outbound/database/token/IToken';
 
-const ConfigSchema = new Schema({
-  time: {
-    value: { type: Number },
-    unity: { type: String, enum: Object.values(Unity) }
-  },
-  useInCalculation: {
-    reimbursement: { type: Number },
-    values_average: { type: Number },
-    time: {
-      value: { type: Number },
-      unity: { type: String, enum: Object.values(Unity) }
-    }
+const configSchema = new Schema({
+  id: { type: String, required: true },
+  name: { type: String, required: true },
+  user_token: { type: String, required: true },
+  use_calculated: {
+    // Ajuste o tipo conforme 'UseCalculated'
+    type: Object,
+    required: true
   },
   display: {
-    monthly_total: { type: Number },
-    next_buy_date: { type: Date },
-    source: { type: String },
-    amount: { type: Number }
+    // Ajuste o tipo conforme 'Display'
+    type: Object,
+    required: true
   },
-  findPair: {
-    pair_name: { type: String }
+  rules: {
+    // Ajuste o tipo conforme 'Rule[]'
+    type: Array,
+    required: true
   },
-  between: {
-    value1: { type: Schema.Types.Mixed },
-    value2: { type: Schema.Types.Mixed }
+  use: {
+    // Ajuste o tipo conforme 'Use'
+    type: Object,
+    required: true
   },
-  frequency: {
-    value: { type: Number },
-    targetNumber: { type: Number },
-    unity: { type: String, enum: Object.values(Unity) }
-  },
-  rule: {
-    used_in_calculation: { type: String }
+  custom_name: { type: Boolean, required: true },
+  find_pair: {
+    // Ajuste o tipo conforme 'FindPair'
+    type: Object
   }
-}, {
-  timestamps: true
 });
 
-const ConfigModel = model<ConfigBO>('Config', ConfigSchema);
+const ConfigModel = model('Config', configSchema);
 
 export default class OutbouncConfigRepositoryPort {
     getModel() {
         return ConfigModel;
     }
 
-    async findAllConfigs(): Promise<ConfigBO[]> {
-        return ConfigModel.find();
+    async findAllConfigs(userToken: IToken): Promise<ConfigBO[]> {
+        return ConfigModel.find({
+          user_token: userToken.value
+        });
     }
 }

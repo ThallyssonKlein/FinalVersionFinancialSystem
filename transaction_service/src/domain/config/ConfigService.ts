@@ -6,6 +6,7 @@ import TransactionsGroupedByDateBO from "@domain/transaction/bo/TransactionsGrou
 import OutboundConfigAdapter from "adaptes/outbound/OutboundConfigAdapter";
 import ConfigsForTransactionsBO from "./ConfigsForTransactionsBO";
 import OutboundRulesEngineAdapter from "adaptes/outbound/OutboundRulesEngineAdapter";
+import IToken from "@ports/outbound/database/token/IToken";
 
 export default class ConfigService extends Loggable {
     private config = new Config().getConfig();
@@ -31,9 +32,9 @@ export default class ConfigService extends Loggable {
         return transactionsGroupedByDate;
     }
 
-     async findConfigsAssociationsForAllTransactions(allTransactions: TransactionFromBankBO[], traceId: string): Promise<ConfigsForTransactionsBO> {
+     async findConfigsAssociationsForAllTransactions(userToken: IToken, allTransactions: TransactionFromBankBO[], traceId: string): Promise<ConfigsForTransactionsBO> {
         this.log.info(`Finding config for that transaction`, traceId);
-        const allConfigs: ConfigBO[] = await this.outboundConfigAdapter.findAllConfigs();
+        const allConfigs: ConfigBO[] = await this.outboundConfigAdapter.findAllConfigs(userToken, traceId);
         this.log.info(`Found ${allConfigs.length} configs`, traceId);
         this.log.info(`Finding default config`, traceId);
         const defaultConfig: ConfigBO = this.findDefaultConfig(allConfigs);
@@ -43,7 +44,7 @@ export default class ConfigService extends Loggable {
         this.log.info(`Grouped transactions by date`, traceId);
 
         this.log.info(`Determining configs for transactions`, traceId);
-        return this.outboundRulesEngineAdapter.determineConfigsForTransactions(defaultConfig, allConfigs, allTransactions, transactionsGroupedByDate);
+        return this.outboundRulesEngineAdapter.determineConfigsForTransactions(defaultConfig, allConfigs, allTransactions, transactionsGroupedByDate, traceId);
     }
 
 

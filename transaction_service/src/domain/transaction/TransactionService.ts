@@ -7,6 +7,7 @@ import TransactionFromBankBO from "./bo/TransactionFromBankBO";
 import OutboundCustomNameQueueAdapter from "adaptes/outbound/OutboundCustomNameQueueAdapter";
 import OutboundTransactionFromBankAdapter from "adaptes/outbound/OutboundTransactionFromBankAdapter";
 import TransactionServiceResultBO from "./bo/TransactionServiceResultBO";
+import IToken from "@ports/outbound/database/token/IToken";
 
 export default class TransactionService extends Loggable {
     constructor(
@@ -21,7 +22,7 @@ export default class TransactionService extends Loggable {
         return configAssociations.getConfigTransactionAssociation()[transactionId];
     }
 
-    private convertTransactionFromBankToTransaction(transaction: TransactionFromBankBO, configAssociations: ConfigsForTransactionsBO): TransactionBO {
+    private convertTransactionFromBankToTransaction(customName: string, transaction: TransactionFromBankBO, configAssociations: ConfigsForTransactionsBO): TransactionBO {
         let config: ConfigBO | null = null
 
         config = this.getTransactionConfigFromAssociation(transaction.getId(), configAssociations);
@@ -31,7 +32,7 @@ export default class TransactionService extends Loggable {
         if (!config.getCustonName()) {
             name = config.getUse().getDefaultName() ? config.getUse().getDefaultName() : transaction.getDescription();
         } else {
-            name = transaction.getCustonName();
+            name = customName;
         }
 
         if (config) {
@@ -59,20 +60,22 @@ export default class TransactionService extends Loggable {
         }
     }
 
-    async saveTransaction(transaction: TransactionFromBankBO, configAssociations: ConfigsForTransactionsBO, traceId: string): Promise<TransactionServiceResultBO> {
+    async saveTransaction(customName: string, transaction: TransactionFromBankBO, configAssociations: ConfigsForTransactionsBO, userToken: IToken, traceId: string): Promise<TransactionServiceResultBO> {
         this.log.info(`Saving transaction ${transaction.getDescription()}`, traceId);
 
         let configForThisTransaction: ConfigBO = this.getTransactionConfigFromAssociation(transaction.getId(), configAssociations);
-        if (configForThisTransaction.getCustonName() && !transaction.getCustonName()) {
-            await this.outboundCustomNameQueueAdapter.sendToCustomNameQueue(transaction);
+        if (configForThisTransaction.getCustonName() && !customName) {
+            await this.outboundCustomNameQueueAdapter.sendToCustomNameQueue(
+                transaction
+            );
             return;
         }
-        let transactionBO: TransactionBO = this.convertTransactionFromBankToTransaction(transaction, configAssociations)
+        let transactionBO: TransactionBO = this.convertTransactionFromBankToTransaction(customName, transaction, configAssociations)
 
         let saveOnNotionResponse: TransactionBO | null = null
         try {
             this.log.info(`Saving transaction on Notion`, traceId);
-            saveOnNotionResponse = await this.outboundTransactionNotionAdapter.createTransaction(transactionBO);
+            saveOnNotionResponse = await this.outboundTransactionNotionAdapter.createTransaction(userToken, transactionBO, traceId);
             this.log.info(`Transaction saved on Notion with id ${saveOnNotionResponse.getId()}`, traceId);
         } catch (err) {
             this.log.error('Error saving transaction on Notion', err);
@@ -85,13 +88,13 @@ export default class TransactionService extends Loggable {
             this.log.info(`Transaction saved on Notion with id ${saveOnNotionResponse.getId()}. Saving on bank`, traceId);
             try {
                 this.log.info(`Saving transaction on bank`, traceId);
-                savedOnBankResponse = await this.outboundTransactionFromBankAdapter.saveTransaction(transaction);
+                savedOnBankResponse = await this.outboundTransactionFromBankAdapter.saveTransaction(userToken, transaction);
                 this.log.info(`Transaction saved on bank with id ${savedOnBankResponse.getId()}`, traceId);
             } catch (err) {
                 this.log.error('Error saving transaction on bank', err);
                 try {
                     this.log.info(`Deleting transaction on Notion with id ${saveOnNotionResponse.getId()}`, traceId);
-                    await this.outboundTransactionNotionAdapter.deleteTransactionById(saveOnNotionResponse.getId());
+                    await this.outboundTransactionNotionAdapter.deleteTransactionById(saveOnNotionResponse.getId(), traceId);
                     this.log.info(`Transaction deleted on Notion with id ${saveOnNotionResponse.getId()}`, traceId);
                 } catch (err) {
                     this.log.error('Error deleting transaction on Notion', err);

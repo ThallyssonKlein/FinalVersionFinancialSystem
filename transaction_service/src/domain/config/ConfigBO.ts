@@ -248,6 +248,7 @@ export class ConfigBO {
     constructor(
         private id: string,
         private name: string,
+        private user_token: string,
         private use_calculated: UseCalculated,
         private display: Display,
         private rules: Rule[],
@@ -262,6 +263,10 @@ export class ConfigBO {
 
     getName() {
         return this.name;
+    }
+
+    getUserToken() {
+        return this.user_token;
     }
 
     getUseCalculated() {
@@ -294,6 +299,10 @@ export class ConfigBO {
 
     setName(name: string) {
         this.name = name;
+    }
+
+    setUserToken(user_token: string) {
+        this.user_token = user_token;
     }
 
     setUseInCalculation(use_in_calculation: UseCalculated) {

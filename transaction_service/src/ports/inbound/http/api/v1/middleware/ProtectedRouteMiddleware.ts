@@ -21,10 +21,12 @@ export default class ProtectedRouteMiddleware extends Loggable {
     try {
       tokenData = await this.inboundTokenAdapter.findToken(token);
 
-    if (!tokenData || !tokenData.id) {
-        this.log.error('Invalid token', req.traceId);
-        return res.status(403).json({ error: 'Unauthorized' });
-    }
+      if (!tokenData || !tokenData.id) {
+          this.log.error('Invalid token', req.traceId);
+          return res.status(403).json({ error: 'Unauthorized' });
+      }
+
+      req.token = tokenData
     } catch (err) {
       this.log.error('Error finding token', req.traceId, err);
       return res.status(500).json({ error: 'Internal Server Error' });

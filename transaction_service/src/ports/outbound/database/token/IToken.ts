@@ -1,4 +1,5 @@
 export default interface IToken {
     id?: number;
-    token: string;
+    value: string;
+    notionDatabaseId: string;
 }
