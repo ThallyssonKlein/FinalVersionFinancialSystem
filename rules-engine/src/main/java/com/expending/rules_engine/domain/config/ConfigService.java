@@ -18,21 +18,6 @@ import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-class BeteweenResult {
-    private boolean shouldReturnConfig;
-    private String queryToSearchTheFrequencyNumber;
-}
-
-@Getter
-@Setter
-@AllArgsConstructor
-class ContainsResult {
-    private boolean shouldReturnConfig;
-    private String queryToSearchTheFrequencyNumber;
-}
 
 @Service
 public class ConfigService {
@@ -69,12 +54,11 @@ public class ConfigService {
         }
     }
 
-    private ContainsResult validateContains(Rule rule, Transaction transaction, boolean shouldReturnConfig, String queryToSearchTheFrequencyNumber) {
+    private boolean validateContains(Rule rule, Transaction transaction, boolean shouldReturnConfig) {
         if (rule.getProperty() != null && rule.getContains() != null) {
             if (rule.getContains() instanceof String) {
                 if (this.getFieldValue(transaction, rule.getProperty()).toString().contains((String) rule.getContains())) {
                     shouldReturnConfig = true;
-                    queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " LIKE '%" + rule.getContains() + "%'";
                 } else {
                     shouldReturnConfig = false;
                 }
@@ -83,7 +67,6 @@ public class ConfigService {
                 for (String contains: containsList) {
                     if (this.getFieldValue(transaction, rule.getProperty()).toString().contains(contains)) {
                         shouldReturnConfig = true;
-                        queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " LIKE '%" + contains + "%' AND";
                     } else {
                         shouldReturnConfig = false;
                     }
@@ -91,19 +74,16 @@ public class ConfigService {
             }
         }
 
-        return new ContainsResult(shouldReturnConfig, queryToSearchTheFrequencyNumber);
+        return shouldReturnConfig;
     }
 
-    private BeteweenResult validateBetween(Between<?> between, Rule rule, Object field, boolean shouldReturnConfig, boolean usingCalculatedField, String queryToSearchTheFrequencyNumber) {
+    private boolean validateBetween(Between<?> between, Rule rule, Object field, boolean shouldReturnConfig) {
         if (between != null) {
             switch (rule.getType()) {
                 case NUMBER -> {
                     if ((Integer) field > (Integer) between.getValue1()
                             && (Integer) field < (Integer) between.getValue2()) {
                         shouldReturnConfig = true;
-                        if (!usingCalculatedField) {
-                            queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " BETWEEN " + between.getValue1() + " AND " + between.getValue2();
-                        }
                     } else {
                         shouldReturnConfig = false;
                     }
@@ -112,9 +92,6 @@ public class ConfigService {
                     if (((Date) field).after((Date) between.getValue1())
                             && ((Date) field).before((Date) between.getValue2())) {
                         shouldReturnConfig = true;
-                        if (!usingCalculatedField) {
-                            queryToSearchTheFrequencyNumber += ConfigService.camelToSnake(rule.getProperty()) + " BETWEEN " + FORMATTER.format(between.getValue1()) + " AND " + FORMATTER.format(between.getValue2());
-                        }
                     } else {
                         shouldReturnConfig = false;
                     }
@@ -125,30 +102,22 @@ public class ConfigService {
             }
         }
 
-        return new BeteweenResult(shouldReturnConfig, queryToSearchTheFrequencyNumber);
+        return shouldReturnConfig;
     }
 
     private boolean isConfigForThisTransaction(Config config, Transaction transaction) {
-        String queryToSearchTheFrequencyNumber = "SELECT * FROM transactions WHERE ";
-
         boolean shouldReturnConfig = false;
         for (Rule rule : config.getRules()) {
             if (config.getUseCalculated() != null) {
                 Object usedInCalculationFieldValue = this.getFieldValue(config.getUseCalculated(), rule.getUseInCalculation()) != null;
                 Between<?> between = this.createBetweenInstance(rule.getType().name(), rule.getBetween().getValue1(), rule.getBetween().getValue2());
-                BeteweenResult betweenResult = validateBetween(between, rule, usedInCalculationFieldValue, shouldReturnConfig, true, queryToSearchTheFrequencyNumber);
-                shouldReturnConfig = betweenResult.isShouldReturnConfig();
-                queryToSearchTheFrequencyNumber = betweenResult.getQueryToSearchTheFrequencyNumber();
+                shouldReturnConfig = validateBetween(between, rule, usedInCalculationFieldValue, shouldReturnConfig);
             } else {
                 Between<?> between = this.createBetweenInstance(rule.getType().name(), rule.getBetween().getValue1(), rule.getBetween().getValue2());
-                BeteweenResult beteweenResult = validateBetween(between, rule, this.getFieldValue(transaction, rule.getProperty()), shouldReturnConfig, false, queryToSearchTheFrequencyNumber);
-                shouldReturnConfig = beteweenResult.isShouldReturnConfig();
-                queryToSearchTheFrequencyNumber = beteweenResult.getQueryToSearchTheFrequencyNumber();
+                shouldReturnConfig = validateBetween(between, rule, this.getFieldValue(transaction, rule.getProperty()), shouldReturnConfig);
             }
 
-            ContainsResult containsResult = validateContains(rule, transaction, shouldReturnConfig, queryToSearchTheFrequencyNumber);
-            shouldReturnConfig = containsResult.isShouldReturnConfig();
-            queryToSearchTheFrequencyNumber = containsResult.getQueryToSearchTheFrequencyNumber();
+            shouldReturnConfig = validateContains(rule, transaction, shouldReturnConfig);
 
             if (rule.getEquals() != null) {
                 if (this.getFieldValue(transaction, rule.getProperty()).equals(rule.getEquals())) {
@@ -201,8 +170,8 @@ public class ConfigService {
                                 if (isThisConfigCorrectForThisTransactionPair) {
                                     pairBOS.add(new PairBO(
                                             config.getFindPair().getPairName(),
-                                            config.getId(),
-                                            new String[]{transaction.getId(), pair.getId()}
+                                            config,
+                                            Arrays.asList(transaction, pair)
                                     ));
                                     puttedInTheMapOrPair = true;
                                 }
