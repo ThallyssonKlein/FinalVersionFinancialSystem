@@ -7,6 +7,7 @@ import TransactionFromBankBO from "@domain/transaction/bo/TransactionFromBankBO"
 import IInboundInvoiceDTO from "@ports/inbound/http/api/v1/dto/inbound/IInboundInvoiceDTO";
 import IToken from "@ports/outbound/database/token/IToken";
 import NotFoundError from "@ports/inbound/http/api/v1/error/NotFoundError";
+import TransactionServiceResultBO from "@domain/transaction/bo/TransactionServiceResultBO";
 
 export default class InboundTransactionAdapter extends Loggable {
     constructor(
@@ -24,14 +25,17 @@ export default class InboundTransactionAdapter extends Loggable {
         return result;
     }
 
-    async saveTransactionInBatch(customName: string, userToken: IToken, transactions: TransactionFromBankBO[], traceId: string) {
+    async saveTransactionInBatch(customName: string, userToken: IToken, transactions: TransactionFromBankBO[], traceId: string): Promise<TransactionServiceResultBO[]> {
         this.log.info(`Saving ${transactions.length} transactions in batch for user ${userToken}`, traceId);
         const configAssociations = await this.configService.findConfigsAssociationsForAllTransactions(userToken, transactions, traceId);
         this.log.info(`Found ${configAssociations.getConfigTransactionAssociation().keys.length} config associations for ${transactions.length} transactions`, traceId);
 
+        const result: TransactionServiceResultBO[] = [];
         for (const transaction of transactions) {
-            await this.transactionService.saveTransaction(customName, transaction, configAssociations, userToken, traceId);
+            result.push(await this.transactionService.saveTransaction(customName, transaction, configAssociations, userToken, traceId));
         }
+
+        return result;
     }
 
     async divideTransactionFromGivenInvoice(userToken: IToken, invoice: IInboundInvoiceDTO, traceId: string) {

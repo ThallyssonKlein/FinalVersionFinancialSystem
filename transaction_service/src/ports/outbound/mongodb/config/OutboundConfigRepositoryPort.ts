@@ -40,8 +40,23 @@ export default class OutbouncConfigRepositoryPort {
         return ConfigModel;
     }
 
+    async createAndReturnConfig(config: ConfigBO): Promise<ConfigBO> {
+        const createdConfig = await ConfigModel.create(config);
+        return new ConfigBO(
+            createdConfig.id,
+            createdConfig.name,
+            createdConfig.user_token,
+            createdConfig.use_calculated,
+            createdConfig.display,
+            createdConfig.rules,
+            createdConfig.use,
+            createdConfig.custom_name,
+            createdConfig.find_pair
+        );
+    }
+
     async findAllConfigs(userToken: IToken): Promise<ConfigBO[]> {
-        return ConfigModel.find({
+        return await ConfigModel.find({
           user_token: userToken.value
         });
     }

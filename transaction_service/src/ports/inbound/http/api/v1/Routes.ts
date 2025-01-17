@@ -1,56 +1,58 @@
 import { Router, Response, Request, NextFunction } from "express";
-import FileUploadMiddleware from "./middleware/FileUploadMiddleware";
-import ProtectedRouteMiddleware from "./middleware/ProtectedRouteMiddleware";
+import InboundTransactionAdapter from "adaptes/inbound/InboundTransactionAdapter";
+import InboundConfigAdapter from "adaptes/inbound/InboundConfigAdapter";
+import TransactionController from "./controller/TransactionController";
+import ConfigController from "./controller/ConfigController";
+import UuidMiddleware from "./middleware/UuidMiddleware";
+import ValidateSchemaMiddleware, { ESource } from "./middleware/ValidateSchemaMiddleware";
+import createTransactionSchema from "./schema/createTransactionSchema";
+import createConfigSchema from "./schema/createConfigSchema";
+import CustomRequest from "./middleware/CustomRequest";
+import findTransactionsXValueXFrequencySchema from "./schema/findTransactionsXValueXFrequencySchema";
 
 export default class Routes {
   private router: Router = Router();
-  private userController: UserController
-  private messageController: MessageController
-  private jobController: UserJobController
-  private paymentsController: PaymentsController
-  private efiBankWebhooksController: EfiBankWebhooksController
-  private lnbitsWebhooksController: LNBitsWebhooksController
+  private transactionController: TransactionController;
+  private configController: ConfigController;
 
-  constructor(inboundUserAdapter: InboundUserAdapter, inboundUserJobAdapter: InboundUserJobAdapter,
-    inboundMessageAdapter: InboundMessageAdapter, inboundPaymentAdapter: InboundTransactionAdapter) {
-    this.userController = new UserController(inboundUserAdapter);
-    this.jobController = new UserJobController(inboundUserJobAdapter);
-    this.messageController = new MessageController(inboundMessageAdapter);
-    this.paymentsController = new PaymentsController(inboundPaymentAdapter);
-    this.efiBankWebhooksController = new EfiBankWebhooksController(inboundPaymentAdapter);
-    this.lnbitsWebhooksController = new LNBitsWebhooksController(inboundPaymentAdapter);
+  constructor(
+    inboundTransactionAdapter: InboundTransactionAdapter,
+    inboundConfigAdapter: InboundConfigAdapter
+  ) {
+    this.transactionController = new TransactionController(inboundTransactionAdapter);
+    this.configController = new ConfigController(inboundConfigAdapter);
     this.setupRouter();
   }
 
-  getRouter() {
+  getRouter(): Router {
     return this.router;
   }
 
-  private setupRouter() {
-    const fileUploadMiddleware = new FileUploadMiddleware();
+  private setupRouter(): void {
     const uuidMiddleware = new UuidMiddleware();
-    const protectedRoute = new ProtectedRouteMiddleware();
-    const resourceOwner = new ResourceOwner();
-    const resourceOwnerOrAdmin = new ResourceOwnerOrAdminMiddleware();
-    const adminRoute = new AdminRouteMiddleware();
+    const createTransactionSchemaValidation = new ValidateSchemaMiddleware(createTransactionSchema, ESource.BODY);
+    const createConfigSchemaValidation = new ValidateSchemaMiddleware(createConfigSchema, ESource.BODY);
+    const findTransactionsXValueXFrequencySchemaValidation = new ValidateSchemaMiddleware(findTransactionsXValueXFrequencySchema, ESource.QUERY);
 
-    const loginValidateSchema = new ValidateSchema(loginSchema);
-    const getReceiverMessagesWithPaginationSchemValidateSchema = new ValidateSchema(getReceiverMessagesWithPaginationSchema, ESource.QUERY);
-    const getTotalAndCountForAReceiverSchemaValidateSchema = new ValidateSchema(getTotalAndCountForAReceiverSchema, ESource.QUERY);
-    const messageSchemaValidateSchema = new ValidateSchema(messageSchema);
-    const getPaymentsByReceiverSchemaValidateSchema = new ValidateSchema(getPaymentsByReceiverSchema, ESource.QUERY);
-    const withdrawSchemaValidateSchema = new ValidateSchema(withdrawSchema);
-    const registerSchemaValidateSchema = new ValidateSchema(registerSchema);
-    const updateSchemaValidateSchema = new ValidateSchema(updateSchema);
-    const virtualWithdrawSchemaValidateSchema = new ValidateSchema(virtualWithdrawSchema);
-    const getAllUsersPaginatedSchemaValidateSchema = new ValidateSchema(getAllUsersPaginatedSchema, ESource.QUERY);
-    const getAllPaymentsPaginatedSchemaValidateSchema = new ValidateSchema(getAllUsersPaginatedSchema, ESource.QUERY);
-
-    this.router.get("/ping", (_, res: Response) => res.send("pong"));
-    this.router.post("/api/v1/user", 
-                      uuidMiddleware.handle,
-                      registerSchemaValidateSchema.handle,
-                      (req: Request, res: Response, next: NextFunction) => this.userController.register(req, res, next));
-    return this.router;
+    this.router.get("/ping", (_req: Request, res: Response, _next: NextFunction): void => {
+      res.send("pong");
+    }); 
+    this.router.post(
+      "/api/v1/transaction",
+      uuidMiddleware.handle,
+      createTransactionSchemaValidation.handle,
+      (req: CustomRequest, res: Response, next: NextFunction) => this.transactionController.saveTransactionInBatch(req, res, next)
+    );
+    this.router.get("/api/v1/transactions/find_transactions_x_value_x_unity_ago",
+      uuidMiddleware.handle,
+      findTransactionsXValueXFrequencySchemaValidation.handle,
+      (req: CustomRequest, res: Response, next: NextFunction) => this.transactionController.findTransactionsXValueXUnityAgo(req, res, next)
+    )
+    this.router.post(
+      "/api/v1/config",
+      uuidMiddleware.handle,
+      createConfigSchemaValidation.handle,
+      (req: CustomRequest, res: Response, next: NextFunction) => this.configController.saveConfig(req, res, next)
+    );
   }
 }

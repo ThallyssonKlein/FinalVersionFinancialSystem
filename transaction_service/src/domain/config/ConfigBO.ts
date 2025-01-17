@@ -246,7 +246,6 @@ class Use {
 
 export class ConfigBO {
     constructor(
-        private id: string,
         private name: string,
         private user_token: string,
         private use_calculated: UseCalculated,
@@ -255,6 +254,7 @@ export class ConfigBO {
         private use: Use,
         private custom_name: boolean,
         private find_pair?: FindPair,
+        private id?: string,
     ) {}
 
     getId() {

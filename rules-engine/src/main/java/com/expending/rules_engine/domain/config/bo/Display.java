@@ -1,11 +1,11 @@
 package com.expending.rules_engine.domain.config.bo;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Display {
-    private BigDecimal monthlyTotal;
-    private Date nextBuyDate;
     private String source;
     private Integer amount;
 }
