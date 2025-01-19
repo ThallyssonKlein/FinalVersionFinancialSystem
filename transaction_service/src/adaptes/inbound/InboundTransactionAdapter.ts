@@ -28,6 +28,7 @@ export default class InboundTransactionAdapter extends Loggable {
     async saveTransactionInBatch(customName: string, userToken: IToken, transactions: TransactionFromBankBO[], traceId: string): Promise<TransactionServiceResultBO[]> {
         this.log.info(`Saving ${transactions.length} transactions in batch for user ${userToken}`, traceId);
         const configAssociations = await this.configService.findConfigsAssociationsForAllTransactions(userToken, transactions, traceId);
+        this.log.info(configAssociations, traceId)
         this.log.info(`Found ${configAssociations.getConfigTransactionAssociation().keys.length} config associations for ${transactions.length} transactions`, traceId);
 
         const result: TransactionServiceResultBO[] = [];

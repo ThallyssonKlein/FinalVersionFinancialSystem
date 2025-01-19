@@ -9,6 +9,8 @@ import createTransactionSchema from "./schema/createTransactionSchema";
 import createConfigSchema from "./schema/createConfigSchema";
 import CustomRequest from "./middleware/CustomRequest";
 import findTransactionsXValueXFrequencySchema from "./schema/findTransactionsXValueXFrequencySchema";
+import ProtectedRouteMiddleware from "./middleware/ProtectedRouteMiddleware";
+import InboundTokenAdapter from "adaptes/inbound/InboundTokenAdapter";
 
 export default class Routes {
   private router: Router = Router();
@@ -17,7 +19,8 @@ export default class Routes {
 
   constructor(
     inboundTransactionAdapter: InboundTransactionAdapter,
-    inboundConfigAdapter: InboundConfigAdapter
+    inboundConfigAdapter: InboundConfigAdapter,
+    private inboundTokenAdapter: InboundTokenAdapter
   ) {
     this.transactionController = new TransactionController(inboundTransactionAdapter);
     this.configController = new ConfigController(inboundConfigAdapter);
@@ -30,6 +33,8 @@ export default class Routes {
 
   private setupRouter(): void {
     const uuidMiddleware = new UuidMiddleware();
+    const protectedRouteMiddleware = new ProtectedRouteMiddleware(this.inboundTokenAdapter);
+  
     const createTransactionSchemaValidation = new ValidateSchemaMiddleware(createTransactionSchema, ESource.BODY);
     const createConfigSchemaValidation = new ValidateSchemaMiddleware(createConfigSchema, ESource.BODY);
     const findTransactionsXValueXFrequencySchemaValidation = new ValidateSchemaMiddleware(findTransactionsXValueXFrequencySchema, ESource.QUERY);
@@ -40,18 +45,21 @@ export default class Routes {
     this.router.post(
       "/api/v1/transaction",
       uuidMiddleware.handle,
+      protectedRouteMiddleware.handle,
       createTransactionSchemaValidation.handle,
       (req: CustomRequest, res: Response, next: NextFunction) => this.transactionController.saveTransactionInBatch(req, res, next)
     );
     this.router.get("/api/v1/transactions/find_transactions_x_value_x_unity_ago",
       uuidMiddleware.handle,
       findTransactionsXValueXFrequencySchemaValidation.handle,
+      protectedRouteMiddleware.handle,
       (req: CustomRequest, res: Response, next: NextFunction) => this.transactionController.findTransactionsXValueXUnityAgo(req, res, next)
     )
     this.router.post(
       "/api/v1/config",
       uuidMiddleware.handle,
       createConfigSchemaValidation.handle,
+      protectedRouteMiddleware.handle,
       (req: CustomRequest, res: Response, next: NextFunction) => this.configController.saveConfig(req, res, next)
     );
   }

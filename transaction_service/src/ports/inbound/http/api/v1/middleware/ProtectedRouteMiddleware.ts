@@ -10,11 +10,11 @@ export default class ProtectedRouteMiddleware extends Loggable {
     this.handle = this.handle.bind(this);
   }
 
-  async handle(req: CustomRequest, res: Response, next: NextFunction) {
+  async handle(req: CustomRequest, res: Response, next: NextFunction): void {
     const token = req.header('Authorization');
     if (!token) {
       this.log.error('No token provided', req.traceId);
-      return res.status(401).json({ error: 'No token provided' });
+      res.status(401).json({ error: 'No token provided' });
     }
 
     let tokenData: IToken | null = null;
@@ -23,12 +23,15 @@ export default class ProtectedRouteMiddleware extends Loggable {
 
       if (!tokenData || !tokenData.id) {
           this.log.error('Invalid token', req.traceId);
-          return res.status(403).json({ error: 'Unauthorized' });
+          res.status(403).json({ error: 'Unauthorized' });
       }
 
       req.token = tokenData
     } catch (err) {
       this.log.error('Error finding token', req.traceId, err);
-      return res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: 'Internal Server Error' });
     }
+
+    next();
+  }
 }

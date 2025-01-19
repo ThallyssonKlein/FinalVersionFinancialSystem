@@ -15,6 +15,7 @@ export default class TransactionController extends Loggable {
 
     async findTransactionsXValueXUnityAgo(req: CustomRequest, res: Response, next: NextFunction): Promise<void> {
         try {
+            // this.log.info(`Request received to find transactions x value x unity ago`, req.traceId);
             const query = req.query as unknown as IInboundFrequencyDTO
 
             res.status(200).json(
@@ -27,6 +28,7 @@ export default class TransactionController extends Loggable {
 
     async saveTransactionInBatch(req: CustomRequest, res: Response, next: NextFunction): Promise<void> {
         try {
+            // this.log.info(`Request received to save transactions in batch`, req.traceId);
             const userToken = req.token;
             const body = req.body as InboundSaveTransactionsInBatchDTO;
             const customName = body.custom_name;

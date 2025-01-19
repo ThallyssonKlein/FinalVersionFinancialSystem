@@ -44,7 +44,7 @@ export default class ConfigService extends Loggable {
         this.log.info(`Grouped transactions by date`, traceId);
 
         this.log.info(`Determining configs for transactions`, traceId);
-        return this.outboundRulesEngineAdapter.determineConfigsForTransactions(defaultConfig, allConfigs, allTransactions, transactionsGroupedByDate, traceId);
+        return await this.outboundRulesEngineAdapter.determineConfigsForTransactions(defaultConfig, allConfigs, allTransactions, transactionsGroupedByDate, traceId);
     }
 
 

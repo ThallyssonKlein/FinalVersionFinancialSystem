@@ -8,8 +8,21 @@ type IConfig = {
     apiKey: string;
     databaseId: string;
   },
+  db: {
+    user: string;
+    host: string;
+    database: string;
+    password: string;
+    port: number;
+  },
+  mongodb: {
+    uri: string;
+  }
   business: {
     defaultConfigId: string;
+  },
+  rulesEngineAPI: {
+    baseURL: string,
   }
 };
 
@@ -53,16 +66,57 @@ export default class Config {
       throw new Error("DEFAULT_CONFIG_ID is not defined");
     }
 
+    if (!process.env.DB_USER) {
+      throw new Error("DB_USER is not defined");
+    }
+
+    if (!process.env.DB_HOST) {
+      throw new Error("DB_HOST is not defined");
+    }
+
+    if (!process.env.DB_DATABASE) {
+      throw new Error("DB_DATABASE is not defined");
+    }
+
+    if (!process.env.DB_PASSWORD) {
+      throw new Error("DB_PASSWORD is not defined");
+    }
+
+    if (!process.env.DB_PORT) {
+      throw new Error("DB_PORT is not defined");
+    }
+
+    if (!process.env.MONGODB_URI) {
+      throw new Error("MONGODB_URI is not defined");
+    }
+
+    if (!process.env.RULES_ENGINE_URL) {
+      throw new Error("RULES_ENGINE_URL is not defined");
+    }
+
     this.config = {
       env: process.env.NODE_ENV,
-      host: process.env.HOST || 'localhost',
-      port: parseInt(process.env.PORT || "3000"),
+      host: process.env.HOST,
+      port: parseInt(process.env.PORT),
       notion: {
-        apiKey: process.env.NOTION_API_KEY || '',
-        databaseId: process.env.NOTION_DATABASE_ID || ''
+        apiKey: process.env.NOTION_API_KEY,
+        databaseId: process.env.NOTION_DATABASE_ID
       },
       business: {
-        defaultConfigId: process.env.DEFAULT_CONFIG_ID || ''
+        defaultConfigId: process.env.DEFAULT_CONFIG_ID
+      },
+      db: {
+        user: process.env.DB_USER,
+        host: process.env.DB_HOST,
+        database: process.env.DB_DATABASE,
+        password: process.env.DB_PASSWORD,
+        port: parseInt(process.env.DB_PORT)
+      },
+      mongodb: {
+        uri: process.env.MONGODB_URI
+      },
+      rulesEngineAPI: {
+        baseURL: process.env.RULES_ENGINE_URL,
       }
     };
   }
