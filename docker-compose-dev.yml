@@ -1,0 +1,43 @@
+services:
+  postgres_financial_systerm:
+    image: postgres:14
+    container_name: postgres_financial_systerm
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: financial_system
+    volumes:
+      - postgres_data_financial_system:/var/lib/postgresql/data
+      - ./init.dev.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  # transaction_service_financial_system:
+  #   build:
+  #     context: ./transaction-service
+  #     dockerfile: Dockerfile.dev
+  #   container_name: transaction_service_financial_system
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - postgres_financial_systerm
+  #     - mongo_db_financial_system
+
+  mongo_db_financial_system:
+    image: mongo:8.0.4
+    container_name: mongo_db_financial_system
+    environment:
+      MONGO_INITDB_DATABASE: financial_system
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data_financial_system:/data/db
+      - ./mongod.conf:/etc/mongod.conf
+      - ./init-mongo.dev.sh:/docker-entrypoint-initdb.d/init-mongo.dev.sh
+    entrypoint: ["bash", "/docker-entrypoint-initdb.d/init-mongo.dev.sh"]
+    restart: unless-stopped
+  
+volumes:
+  postgres_data_financial_system:
+  mongo_data_financial_system:
