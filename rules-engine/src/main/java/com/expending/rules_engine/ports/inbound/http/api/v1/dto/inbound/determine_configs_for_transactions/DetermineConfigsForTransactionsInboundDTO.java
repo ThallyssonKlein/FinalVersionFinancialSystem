@@ -1,4 +1,4 @@
-package com.ports.inbound.http.api.v1.dto.inbound.determine_configs_for_transactions;
+package com.expending.rules_engine.ports.inbound.http.api.v1.dto.inbound.determine_configs_for_transactions;
 
 import com.expending.rules_engine.domain.TransactionsGroupedByDateBO;
 import com.expending.rules_engine.domain.config.bo.Config;

@@ -11,7 +11,6 @@ import java.util.Date;
 public class Transaction {
     private String id;
     private String description;
-    private Type type;
     private BigDecimal value;
     private Date date;
 }
