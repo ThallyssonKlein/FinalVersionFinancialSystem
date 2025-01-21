@@ -1,79 +1,302 @@
-Data,Valor,Identificador,Descrição,Date,Description,Operation ID,Value
-01/09/2024,62.25,66d46865-e6d4-4e83-910e-e296171c0824,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-01/09/2024,-62.25,66d46865-e6d4-4e83-910e-e296171c0824,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-01/09/2024,60.0,66d4b01a-1421-408c-8896-9c5dce59a067,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-01/09/2024,-60.0,66d4b01a-1421-408c-8896-9c5dce59a067,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-01/09/2024,140.0,66d4c6fd-1cb5-47c8-bca9-382e72aa47a9,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-01/09/2024,-140.0,66d4c6fd-1cb5-47c8-bca9-382e72aa47a9,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-01/09/2024,80.0,66d51a04-5a89-4bb9-a892-4141181025b5,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-01/09/2024,-80.0,66d51a04-5a89-4bb9-a892-4141181025b5,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-02/09/2024,30.0,66d613e0-2c27-4524-8b7a-927dde9c0fb1,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-02/09/2024,-30.0,66d613e0-2c27-4524-8b7a-927dde9c0fb1,Transferência enviada pelo Pix - 24265386 Antonio Cordeiro Costa - 24.265.386/0001-21 - CAIXA ECONOMICA FEDERAL (0104) Agência: 3880 Conta: 1292000000579713453-1,,,,
-02/09/2024,65.7,66d635e8-7737-4b41-880c-a6fffcee5d2c,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-02/09/2024,-65.7,66d635e8-7737-4b41-880c-a6fffcee5d2c,Transferência enviada pelo Pix - iFood - 14.380.200/0001-21 - ADYEN DO BRASIL IP LTDA. Agência: 1 Conta: 100000003-3,,,,
-02/09/2024,1500.0,66d675cc-4279-4737-9a3d-c1be926b330f,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-02/09/2024,-1500.0,66d675cc-4279-4737-9a3d-c1be926b330f,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-03/09/2024,49.39,66d7495f-1418-41a1-b42c-d4f697ce5f3f,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-03/09/2024,-49.39,66d7495f-1418-41a1-b42c-d4f697ce5f3f,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-04/09/2024,15.99,66d87644-9e1d-4c7c-bbac-ee3778c81ed8,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-04/09/2024,-15.99,66d87644-9e1d-4c7c-bbac-ee3778c81ed8,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-04/09/2024,37.99,66d8da55-f221-47bf-a358-1217c2ab7316,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-04/09/2024,-37.99,66d8da55-f221-47bf-a358-1217c2ab7316,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-06/09/2024,10.0,66db85ec-43f8-4966-a594-bc745f36c914,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-06/09/2024,-10.0,66db85ec-43f8-4966-a594-bc745f36c914,Transferência enviada pelo Pix - Cristiano Souza da Fonseca - •••.789.190-•• - Nubank (0260) Agência: 1 Conta: 18578641-8,,,,
-06/09/2024,16.5,66db9131-07cb-49b2-b507-57c11c823c77,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-06/09/2024,-16.5,66db9131-07cb-49b2-b507-57c11c823c77,Transferência enviada pelo Pix - BETTER COMERCIO DE ALIMENTOS LTDA - 01.477.466/0001-45 - BCO SANTANDER (BRASIL) S.A. (0033) Agência: 3131 Conta: 13000580-5,,,,
-07/09/2024,52.67,66dc5acf-d00e-406b-a194-b7905ab65083,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-07/09/2024,-52.67,66dc5acf-d00e-406b-a194-b7905ab65083,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-07/09/2024,31.98,66dc5b68-333c-4d1f-9614-d38dc5055775,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-07/09/2024,-31.98,66dc5b68-333c-4d1f-9614-d38dc5055775,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-07/09/2024,18.0,66dc7924-dbc6-4c33-8764-684a4caed5d7,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-07/09/2024,-18.0,66dc7924-dbc6-4c33-8764-684a4caed5d7,Transferência enviada pelo Pix - Sabrina Amara Correia - •••.309.269-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 33814852-7,,,,
-07/09/2024,34.82,66dca17c-70d0-47a2-a87d-a2b7db9446d2,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-07/09/2024,-34.82,66dca17c-70d0-47a2-a87d-a2b7db9446d2,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-08/09/2024,500.0,66dde812-91b8-4b38-9e32-8681e1beeb94,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-08/09/2024,-500.0,66dde812-91b8-4b38-9e32-8681e1beeb94,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-12/09/2024,8387.1,66e32b5f-3b89-4c23-8e22-068c9bf44737,Transferência Recebida - WEFIN LICENCIADORA S.A - 40.071.552/0001-05 - BCO BRADESCO S.A. (0237) Agência: 3391 Conta: 8790-4,,,,
-12/09/2024,-8387.1,66e33e09-6ab4-45a3-9ecf-5a63fd71aa2c,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-02/08/2024,13000.0,66acf95c-0afa-4664-b553-445c3f214c0e,Transferência Recebida - WEFIN LICENCIADORA S.A - 40.071.552/0001-05 - BCO BRADESCO S.A. (0237) Agência: 3391 Conta: 8790-4,,,,
-03/08/2024,-13000.0,66ae9188-241d-4940-bfc3-8026396bab6b,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-12/08/2024,4000.0,66b97d37-66c9-4673-a048-f58b07e5e3d1,Depósito de empréstimo,,,,
-12/08/2024,-3312.9,66b97dd4-b0ab-413f-8588-45249f3e7c38,Pagamento de boleto efetuado - PJBANK PAGAMENTOS S.A.,,,,
-12/08/2024,-139.59,66ba7b33-cc41-4acd-98de-1f52c08e3b83,Transferência enviada pelo Pix - CAMARAO BEACH LTDA - 51.846.641/0001-00 - STONE IP S.A. (0197) Agência: 1 Conta: 8701161-5,,,,
-14/08/2024,-160.0,66bd4b18-5da9-4b38-841e-dd432c4ea321,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-15/08/2024,-20.0,66be8ada-b70b-4b8d-8f59-3d99a5233b2b,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-16/08/2024,-179.0,66bf5d86-a50b-429d-beca-558f8b681dc2,Transferência enviada pelo Pix - Bruna Amancio dos Santos - •••.651.739-•• - BCO SANTANDER (BRASIL) S.A. (0033) Agência: 3176 Conta: 1068337-7,,,,
-16/08/2024,-10.0,66bfb9dc-963c-4021-8928-b9fe5fd1fae3,Transferência enviada pelo Pix - Tais Rodrigues Ramos - •••.880.840-•• - PAGSEGURO INTERNET IP S.A. (0290) Agência: 1 Conta: 11170502-6,,,,
-16/08/2024,-13.92,66bfca2c-9509-41a4-ad31-062f43e4d037,Transferência enviada pelo Pix - Uber - 17.895.646/0001-87 - EBANX IP LTDA. (0383) Agência: 1 Conta: 1000752180-1,,,,
-17/08/2024,25.0,66c0a0f4-28a9-41a4-9fde-39336bf60045,Transferência Recebida - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-18/08/2024,-100.0,66c173cf-916f-430a-bfbe-e341c65a4ead,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-19/08/2024,-78.67,66c0b093-7c3d-4540-b7b9-6767c2a34570,Pagamento de boleto efetuado - VIVO-PR/SC GLOBAL TE,,,,
-22/08/2024,-10.92,66c72fa1-87ac-4660-af90-0df3219284e4,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-24/08/2024,250.0,66c9fa57-99d9-4f6b-97c4-906b1c2a519b,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-24/08/2024,-250.0,66c9fa57-99d9-4f6b-97c4-906b1c2a519b,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
-26/08/2024,98.8,66ccb4f7-e759-40d6-909e-65a988a1bdd3,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-26/08/2024,-98.8,66ccb4f7-e759-40d6-909e-65a988a1bdd3,Transferência enviada pelo Pix - BRITOPHARMA FCIA E PERF - 31.179.778/0001-33 - PINBANK IP (0529) Agência: 496 Conta: 190879-0,,,,
-26/08/2024,40.57,66cce245-39dd-4efc-980e-7f380057cb75,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-26/08/2024,-40.57,66cce245-39dd-4efc-980e-7f380057cb75,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-27/08/2024,45.61,66cd41b8-afb6-4041-936c-04ae0935e91b,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-45.61,66cd41b8-afb6-4041-936c-04ae0935e91b,Transferência enviada pelo Pix - SERVICOS ONLINE BR - 20.110.153/0001-07 - ITAÚ UNIBANCO S.A. (0341) Agência: 246 Conta: 15141-9,,,,
-27/08/2024,8.0,66cdc6d9-0903-491f-8c56-2d3d70cc6e5e,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-8.0,66cdc6d9-0903-491f-8c56-2d3d70cc6e5e,Transferência enviada pelo Pix - Daiana Machado Meirelles - •••.581.420-•• - Nubank (0260) Agência: 1 Conta: 97320323-5,,,,
-27/08/2024,64.0,66cdcdc3-e46c-4b4a-8289-71b9c798fbb2,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-64.0,66cdcdc3-e46c-4b4a-8289-71b9c798fbb2,Transferência enviada pelo Pix - OLIMPO - 29.808.561/0001-01 - CCLA MAXI ALFA Agência: 3069 Conta: 471509-8,,,,
-27/08/2024,18.87,66cde695-b28a-42df-943b-4fcca8d42c23,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-18.87,66cde695-b28a-42df-943b-4fcca8d42c23,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,,,
-27/08/2024,220.0,66cdff12-b08b-444f-bf49-d69df2c720d7,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-220.0,66cdff12-b08b-444f-bf49-d69df2c720d7,Transferência enviada pelo Pix - Reinaldo Conceiçao dos Santos - •••.090.129-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 74208844-6,,,,
-27/08/2024,100.1,66ce0273-f146-43b1-a136-e1dc444c454d,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-100.1,66ce0273-f146-43b1-a136-e1dc444c454d,Transferência enviada pelo Pix - PAULO EDUARDO M.A DOS REIS LTDA - 42.356.177/0001-75 - PAGSEGURO INTERNET IP S.A. (0290) Agência: 1 Conta: 31358762-8,,,,
-27/08/2024,100.0,66ce1577-ba05-4660-9f52-39962d2ac688,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-27/08/2024,-100.0,66ce1577-ba05-4660-9f52-39962d2ac688,Transferência enviada pelo Pix - Reinaldo Conceiçao dos Santos - •••.090.129-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 74208844-6,,,,
-28/08/2024,35.0,66cf197c-d399-4193-870b-d76183860f9a,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-28/08/2024,-35.0,66cf197c-d399-4193-870b-d76183860f9a,Transferência enviada pelo Pix - SABRINA AMARA CORREIA 00730926907 - 43.233.243/0001-82 - CLOUDWALK IP LTDA (0542) Agência: 1 Conta: 7440663-3,,,,
-28/08/2024,150.0,66cf34b6-da11-4bbd-9f98-c26f6aa2fa0c,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-28/08/2024,-150.0,66cf34b6-da11-4bbd-9f98-c26f6aa2fa0c,Transferência enviada pelo Pix - Elizete Silva Camilo - •••.353.638-•• - BCO BRADESCO S.A. (0237) Agência: 1662 Conta: 34752-3,,,,
-28/08/2024,54.9,66cf39fb-1ad0-4049-a0cc-adddc501dd5f,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,,,
-28/08/2024,-54.9,66cf39fb-1ad0-4049-a0cc-adddc501dd5f,Transferência enviada pelo Pix - Pagarme Pagamentos SA - 18.727.053/0001-74 - STONE IP S.A. (0197) Agência: 1 Conta: 16714636-4,,,,
-02/07/2024,9100.0,66843f2b-0135-4735-9480-41cd3edb7f68,Transferência Recebida - WEFIN LICENCIADORA S.A - 40.071.552/0001-05 - BCO BRADESCO S.A. (0237) Agência: 3391 Conta: 8790-4,,,,
-03/07/2024,-9100.0,66855df3-ee22-463d-bcae-8a623daabd98,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,,,
+Data,Descrição,ID da operação,Valor,Identificador
+28-02-2024,Reembolso Compra garantida,72637110247.0,"R$ 113,99",
+29-02-2024,Transferência Pix enviada Thallysson Klein Flor,73314581768.0,"R$ -113,99",
+01-10-2024,"Pagamento Notion Labs, Inc.",88696472659.0,"R$ -0,15",
+01-10-2024,Rendimentos,1440454786864.0,"R$ 0,36",
+01-10-2024,Transferência enviada Alessandro Dos Santos Correa,89022222307.0,"R$ -700,00",
+02-10-2024,Rendimentos,1441701698294.0,"R$ 0,12",
+02-10-2024,Compra de 1 Capa Cadeira Escritório Executiva Malha Ajustável Secretar Mercado Liv...,89405878278.0,"R$ -66,90",
+02-10-2024,Transferência Pix recebida Eduarda Hoff Sombrio,89101848001.0,"R$ 4.200,00",
+02-10-2024,Pagamento de contas Claro Móvel,89107704283.0,"R$ -83,14",
+02-10-2024,Pagamento de contas Asaas,89416460660.0,"R$ -350,00",
+02-10-2024,Transferência Pix recebida LEANDRO FARIA MORAES 67341110082,89141609259.0,"R$ 3.250,00",
+02-10-2024,Pagamento de contas Banco Cooperativo do Brasil S/A - Bancoob,89456403970.0,"R$ -99,90",
+03-10-2024,Rendimentos,1443150266653.0,"R$ 1,39",
+03-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,89177717739.0,"R$ -57,94",
+04-10-2024,Rendimentos,1444660577083.0,"R$ 2,44",
+04-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,89631683106.0,"R$ -50,36",
+04-10-2024,Pagamento de contas Banco Santander (Brasil) S. A.,89331130999.0,"R$ -1.679,74",
+05-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,89707355516.0,"R$ -25,99",
+06-10-2024,Pagamento de contas Banco Bradesco S.A.,89782927990.0,"R$ -411,43",
+06-10-2024,Dinheiro reservado Psiquiatra,89472957953.0,"R$ -450,00",
+06-10-2024,Dinheiro reservado Remédios,89472974069.0,"R$ -600,00",
+06-10-2024,Dinheiro reservado Faxina,89498685263.0,"R$ -150,00",
+06-10-2024,Dinheiro reservado Marmitas,89499334229.0,"R$ -300,00",
+06-10-2024,Dinheiro reservado Marmitas 2,89498891225.0,"R$ -300,00",
+07-10-2024,Pagamento FELIPE DE OLIVEIRA FOGLIATTO 09788434959,89529515189.0,"R$ -22,00",
+07-10-2024,Rendimentos,1446292298877.0,"R$ 2,42",
+07-10-2024,Compra de Esguicho Mutifunção 10 Jatos Para Engate Rápido - Tramontina Mercado Liv...,89856895018.0,"R$ -47,29",
+07-10-2024,Pagamento de contas Superlógica Sociedade de Crédito Direto S/A,89870597188.0,"R$ -3.028,02",
+07-10-2024,Dinheiro retirado Marmitas 2,89498891225.0,"R$ 300,00",
+07-10-2024,Pagamento de contas Asaas,89576033635.0,"R$ -175,00",
+07-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,89577353623.0,"R$ -28,57",
+07-10-2024,Transferência Pix recebida Ricardo dos Passos Cavalheiro,89919831352.0,"R$ 65,53",
+08-10-2024,Rendimentos,1448325035502.0,"R$ 0,07",
+08-10-2024,Dinheiro retirado Marmitas,89642824015.0,"R$ 300,10",
+08-10-2024,Pagamento com QR Pix iFood,89647473443.0,"R$ -413,88",
+08-10-2024,Pagamento com QR Pix SABRINA AMARA CORREIA 00730926907,89653756665.0,"R$ -18,00",
+08-10-2024,Transferência Pix enviada Ricardo dos Passos Cavalheiro,89975246212.0,"R$ -24,88",
+08-10-2024,Transferência Pix recebida Ricardo dos Passos Cavalheiro,89665939883.0,"R$ 0,37",
+09-10-2024,Rendimentos,1449778229572.0,"R$ 0,04",
+09-10-2024,Transferência Pix enviada Ricardo dos Passos Cavalheiro,89769491163.0,"R$ -52,49",
+10-10-2024,Rendimentos,1451428550188.0,"R$ 0,02",
+10-10-2024,Dinheiro retirado Remédios,90050404792.0,"R$ 600,40",
+10-10-2024,Dinheiro retirado Psiquiatra,89739244471.0,"R$ 450,30",
+10-10-2024,Dinheiro retirado Faxina,90050474618.0,"R$ 150,10",
+10-10-2024,Compra de Kit De Lenços Umedecidos Aroma De Aloe Vera Com 576 Unidades Pampers Mer...,90147973650.0,"R$ -164,61",
+10-10-2024,Rendimentos de Reservas,1451428550188.0,"R$ 0,40",
+10-10-2024,Transferência Pix enviada ELIZETI SILVA CAMILO JUSTINIANO,89854617241.0,"R$ -150,00",
+10-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,89874394959.0,"R$ -16,45",
+10-10-2024,Pagamento com QR Pix FARMACIA BOM JESUS,89900716053.0,"R$ -581,13",
+11-10-2024,Rendimentos,1452875403933.0,"R$ 0,32",
+13-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,90450812388.0,"R$ -28,73",
+13-10-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,90460655136.0,"R$ -55,98",
+14-10-2024,Rendimentos,1454168759200.0,"R$ 0,12",
+15-10-2024,Rendimentos,1455688399521.0,"R$ 0,09",
+16-10-2024,Rendimentos,1457598021828.0,"R$ 0,09",
+16-10-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,90718466200.0,"R$ -45,99",
+17-10-2024,Rendimentos,1458922999363.0,"R$ 0,07",
+17-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,90779980314.0,"R$ -2,77",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90800956362.0,"R$ -8,93",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90800759390.0,"R$ -13,53",
+17-10-2024,Transferência cancelada UBER DO BRASIL TECNOLOGIA LTDA.,90800956362.0,"R$ 8,93",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90487970253.0,"R$ -13,43",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90803407684.0,"R$ -15,13",
+17-10-2024,Transferência cancelada UBER DO BRASIL TECNOLOGIA LTDA.,90487970253.0,"R$ 13,43",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90806569200.0,"R$ -13,56",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90807153492.0,"R$ -13,83",
+17-10-2024,Transferência cancelada UBER DO BRASIL TECNOLOGIA LTDA.,90806569200.0,"R$ 13,56",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90505560341.0,"R$ -12,71",
+17-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,90821335226.0,"R$ -14,05",
+17-10-2024,Transferência cancelada UBER DO BRASIL TECNOLOGIA LTDA.,90505560341.0,"R$ 12,71",
+17-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,90508971359.0,"R$ -67,34",
+18-10-2024,Rendimentos,1460297563718.0,"R$ 0,03",
+19-10-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,90655366707.0,"R$ -77,04",
+21-10-2024,Rendimentos,1461555418025.0,"R$ 0,04",
+21-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,90807803583.0,"R$ -1,00",
+22-10-2024,Rendimentos,1463953249157.0,"R$ 0,01",
+23-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,90981900151.0,"R$ -1,00",
+24-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91388900340.0,"R$ -1,00",
+24-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91071855603.0,"R$ -1,00",
+24-10-2024,Transferência Pix recebida 44224564 LEANDRO FARIA MORAES,91406878702.0,"R$ 4,40",
+24-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91098831481.0,"R$ -1,00",
+24-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91434296888.0,"R$ -1,00",
+24-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91434750454.0,"R$ -1,00",
+25-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91478780398.0,"R$ -1,00",
+25-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91479171260.0,"R$ -1,00",
+25-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91171462413.0,"R$ -1,00",
+25-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91494762402.0,"R$ -1,00",
+25-10-2024,Pagamento com QR Pix 44224564 LEANDRO FARIA MORAES,91496951514.0,"R$ -0,01",
+28-10-2024,Débito por dívida Empréstimos Mercado Pago,1542118674.0,"R$ -0,28",
+28-10-2024,Transferência Pix recebida Eduarda Hoff Sombrio,91422186571.0,"R$ 100,00",
+28-10-2024,Débito por dívida Empréstimos Mercado Pago,1542995667.0,"R$ -55,45",
+28-10-2024,Transferência Pix recebida LEANDRO FARIA MORAES 67341110082,91423809779.0,"R$ 3.250,00",
+28-10-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,91435818911.0,"R$ -54,89",
+28-10-2024,Transferência Pix recebida Eduarda Hoff Sombrio,91441704017.0,"R$ 500,00",
+29-10-2024,Rendimentos,1470967244270.0,"R$ 1,28",
+29-10-2024,Pagamento iFood,91496867249.0,"R$ -4,95",
+29-10-2024,Dinheiro reservado Internet movel,91515700615.0,"R$ -42,51",
+29-10-2024,Dinheiro reservado Remédios,91835096862.0,"R$ -600,00",
+29-10-2024,Dinheiro reservado Psiquiatra,91515745399.0,"R$ -450,00",
+29-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,91519489607.0,"R$ -16,45",
+29-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,91520085295.0,"R$ -43,49",
+29-10-2024,Dinheiro reservado Energia,91529232899.0,"R$ -322,63",
+29-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91849767674.0,"R$ -13,43",
+29-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91541610219.0,"R$ -14,37",
+29-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91544845187.0,"R$ -31,98",
+29-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91553735673.0,"R$ -22,85",
+29-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91878461752.0,"R$ -59,62",
+30-10-2024,Rendimentos,1472561848233.0,"R$ 0,77",
+30-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91889244110.0,"R$ -34,90",
+30-10-2024,"Compra de Cartucho S1 Para Spas Intex, Pack Com 2 Unidades - Intex Mercado Livre",91574389587.0,"R$ -74,02",
+30-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91603902485.0,"R$ -33,93",
+30-10-2024,Pagamento com QR Pix FARMACIA BOM JESUS,91926853130.0,"R$ -67,86",
+30-10-2024,Pagamento com QR Pix MERCADO SUPERNORTE,91616173359.0,"R$ -22,50",
+30-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91947092572.0,"R$ -41,94",
+30-10-2024,Pagamento com QR Pix HOSPITAL BAIA SUL SA,91631501017.0,"R$ -550,00",
+30-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91967124654.0,"R$ -48,90",
+31-10-2024,Rendimentos,1473865084675.0,"R$ 0,65",
+31-10-2024,Pagamento com QR Pix FARMACIA BOM JESUS,92025305782.0,"R$ -271,09",
+31-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,91710466921.0,"R$ -14,82",
+31-10-2024,Pagamento com QR Pix BETTER COMERCIO DE ALIMENTOS LTDA,92031947372.0,"R$ -16,90",
+31-10-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,92034273820.0,"R$ -18,93",
+31-10-2024,Transferência Pix recebida Eduarda Hoff Sombrio,91725183573.0,"R$ 500,00",
+16-09-2024,Transferência Pix recebida Thallysson Klein Flor,87740424539.0,"R$ 2.433,94",
+16-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,87745221241.0,"R$ -61,98",
+16-09-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,88048005476.0,"R$ -65,89",
+16-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88056187428.0,"R$ -100,00",
+17-09-2024,Rendimentos,1424974358850.0,"R$ 0,77",
+17-09-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,87788634023.0,"R$ -13,73",
+17-09-2024,Pagamento com QR Pix EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS,87790012277.0,"R$ -42,45",
+17-09-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,88090964976.0,"R$ -13,36",
+17-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88092608718.0,"R$ -18,79",
+17-09-2024,Compra Mercado Libre,88113518538.0,"R$ -83,46",
+17-09-2024,Transferência Pix enviada LUIGY SOUZA DA SILVA,87829450623.0,"R$ -950,00",
+17-09-2024,Pagamento com QR Pix iFood,87836979099.0,"R$ -54,88",
+18-09-2024,Rendimentos,1426311027233.0,"R$ 0,35",
+18-09-2024,Pagamento com QR Pix SABRINA AMARA CORREIA 00730926907,88185128024.0,"R$ -18,00",
+18-09-2024,Transferência Pix enviada MATEUS ABREU SERVICOS MEDICOS LTDA,88224642130.0,"R$ -450,00",
+18-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88226496626.0,"R$ -11,99",
+19-09-2024,Rendimentos,1427507836809.0,"R$ 0,32",
+19-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88276916734.0,"R$ -324,60",
+19-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88306569832.0,"R$ -42,77",
+19-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88015458617.0,"R$ -180,00",
+20-09-2024,Rendimentos,1429096697438.0,"R$ 0,07",
+20-09-2024,Transferência Pix recebida Eduarda Hoff Sombrio,88360980310.0,"R$ 79,00",
+20-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88377203460.0,"R$ -79,00",
+21-09-2024,Transferência Pix recebida Eduarda Hoff Sombrio,88499007698.0,"R$ 3.000,00",
+22-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88549116952.0,"R$ -37,85",
+23-09-2024,Rendimentos,1430585678756.0,"R$ 0,01",
+23-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88292982613.0,"R$ -33,87",
+17-09-2024,Pagamento com QR Pix iFood,87836979099.0,"R$ -54,88",
+18-09-2024,Rendimentos,1426311027233.0,"R$ 0,35",
+18-09-2024,Pagamento com QR Pix SABRINA AMARA CORREIA 00730926907,88185128024.0,"R$ -18,00",
+18-09-2024,Transferência Pix enviada MATEUS ABREU SERVICOS MEDICOS LTDA,88224642130.0,"R$ -450,00",
+18-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88226496626.0,"R$ -11,99",
+19-09-2024,Rendimentos,1427507836809.0,"R$ 0,32",
+19-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88276916734.0,"R$ -324,60",
+19-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88306569832.0,"R$ -42,77",
+19-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88015458617.0,"R$ -180,00",
+20-09-2024,Rendimentos,1429096697438.0,"R$ 0,07",
+20-09-2024,Transferência Pix recebida Eduarda Hoff Sombrio,88360980310.0,"R$ 79,00",
+20-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88377203460.0,"R$ -79,00",
+21-09-2024,Transferência Pix recebida Eduarda Hoff Sombrio,88499007698.0,"R$ 3.000,00",
+22-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88549116952.0,"R$ -37,85",
+23-09-2024,Rendimentos,1430585678756.0,"R$ 0,01",
+23-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88292982613.0,"R$ -33,87",
+23-09-2024,Transferência Pix enviada LUCAS DE JESUS ANDRADE,88294926369.0,"R$ -20,00",
+23-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88324213075.0,"R$ -21,49",
+23-09-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,88325178979.0,"R$ -291,86",
+24-09-2024,Rendimentos,1432655716904.0,"R$ 0,85",
+24-09-2024,Pagamento com QR Pix SABRINA AMARA CORREIA 00730926907,88408065933.0,"R$ -18,00",
+24-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88421924853.0,"R$ -28,73",
+25-09-2024,Rendimentos,1434008787434.0,"R$ 0,86",
+25-09-2024,Pagamento iFood,88451407947.0,"R$ -4,95",
+25-09-2024,Pagamento com QR Pix FARMACIA BOM JESUS,88772018530.0,"R$ -8,99",
+25-09-2024,Pagamento com QR Pix IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.,88513336349.0,"R$ -49,98",
+26-09-2024,Rendimentos,1435586259418.0,"R$ 0,85",
+27-09-2024,Rendimentos,1437121373650.0,"R$ 0,83",
+27-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88673269499.0,"R$ -20,28",
+27-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88989988724.0,"R$ -50,98",
+27-09-2024,Dinheiro reservado Faxina,88691568631.0,"R$ -200,00",
+27-09-2024,Dinheiro reservado Contador,88691569281.0,"R$ -360,00",
+27-09-2024,Pagamento Linkedin P202043964,89000281064.0,"R$ -1,04",
+27-09-2024,Pagamento cancelado Linkedin P202043964,89000281064.0,"R$ 1,04",
+27-09-2024,"Pagamento Notion Labs, Inc.",88696472659.0,"R$ -115,86",
+28-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88759340979.0,"R$ -57,76",
+28-09-2024,Transferência Pix enviada ELIZETI SILVA CAMILO JUSTINIANO,89078107836.0,"R$ -150,00",
+28-09-2024,Dinheiro retirado Faxina,88691568631.0,"R$ 200,00",
+28-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88802545405.0,"R$ -35,07",
+29-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,89145193660.0,"R$ -44,94",
+29-09-2024,Transferência Pix enviada Ricardo dos Passos Cavalheiro,89175454492.0,"R$ -310,00",
+30-09-2024,Rendimentos,1438961226736.0,"R$ 0,60",
+30-09-2024,Transferência Pix enviada Antonio Souza alves,88914182179.0,"R$ -600,00",
+30-09-2024,Pagamento com QR Pix SABRINA AMARA CORREIA 00730926907,88922203171.0,"R$ -18,00",
+30-09-2024,Pagamento com código QR Pix - Cancelado SABRINA AMARA CORREIA 00730926907,88922203171.0,"R$ 18,00",
+30-09-2024,Dinheiro retirado Contador,89203141072.0,"R$ 360,19",
+30-09-2024,Transferência Pix enviada Sabrina Amara Correia,89230653022.0,"R$ -18,00",
+30-09-2024,Pagamento com QR Pix MERCADO SUPERNORTE,88931171575.0,"R$ -22,57",
+30-09-2024,Pagamento com QR Pix UBER DO BRASIL TECNOLOGIA LTDA.,88931839789.0,"R$ -37,90",
+30-09-2024,Transferência enviada UBER DO BRASIL TECNOLOGIA LTDA.,88931839789.0,"R$ 35,66",
+21-11-2024,Dinheiro recebido Desconto por pagamento antecipado histórico,94080185244.0,"R$ 37,69",
+24-11-2024,Transferência Pix recebida THALLYSSON KLEIN FLOR,93957522543.0,"R$ 3.661,33",
+24-11-2024,Transferência Pix enviada Ricardo dos Passos Cavalheiro,94295483864.0,"R$ -60,00",
+25-11-2024,Rendimentos,1504204663311.0,"R$ 0,02",
+25-11-2024,Pagamento iFood,94353676946.0,"R$ -4,95",
+25-11-2024,Transferência Pix enviada Ricardo dos Passos Cavalheiro,94022156555.0,"R$ -6,00",
+26-11-2024,Rendimentos,1505888316075.0,"R$ 1,24",
+26-11-2024,Transferência Pix enviada THALLYSSON KLEIN FLOR,94138693383.0,"R$ -3.629,33",
+29-11-2024,Transferência Pix recebida Ricardo dos Passos Cavalheiro,94410999233.0,"R$ 60,08",
+29-11-2024,Débito por dívida Empréstimos Mercado Pago,1612134743.0,"R$ -60,08",
+15-12-2024,Dinheiro reservado Areia Filipa,96459983324.0,"R$ -66,70",
+15-12-2024,Dinheiro retirado Areia Filipa,96459983324.0,"R$ 66,70",
+15-12-2024,Dinheiro retirado Frete,96113307119.0,"R$ 39,74",
+15-12-2024,Dinheiro retirado Lixeira Organica,96112805811.0,"R$ 25,91",
+15-12-2024,Dinheiro retirado Sacolas Plásticas,96460542214.0,"R$ 21,49",
+15-12-2024,Compra Mercado Libre,96461353782.0,"R$ -153,84",
+15-12-2024,Dinheiro retirado Heptabase,96459934518.0,"R$ 75,00",
+15-12-2024,Transferência Pix enviada Ricardo dos Passos Cavalheiro,96115288813.0,"R$ -75,00",
+15-12-2024,Empréstimo Pessoal creditado Linha de Crédito,96462570116.0,"R$ 3.200,00",
+15-12-2024,Dinheiro retirado Cafeína,96459245552.0,"R$ 54,00",
+15-12-2024,Dinheiro retirado Agua,96460378268.0,"R$ 20,00",
+15-12-2024,Transferência Pix enviada THALLYSSON KLEIN FLOR,96462095040.0,"R$ -3.311,97",
+30-12-2024,Transferência Pix recebida Ricardo dos Passos Cavalheiro,97590762253.0,"R$ 76,28",
+30-12-2024,Débito por dívida Empréstimos Mercado Pago,1678050003.0,"R$ -76,28",
+01/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,62.25,66d46865-e6d4-4e83-910e-e296171c0824
+01/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-62.25,66d46865-e6d4-4e83-910e-e296171c0824
+01/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,60.0,66d4b01a-1421-408c-8896-9c5dce59a067
+01/09/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-60.0,66d4b01a-1421-408c-8896-9c5dce59a067
+01/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,140.0,66d4c6fd-1cb5-47c8-bca9-382e72aa47a9
+01/09/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-140.0,66d4c6fd-1cb5-47c8-bca9-382e72aa47a9
+01/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,80.0,66d51a04-5a89-4bb9-a892-4141181025b5
+01/09/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-80.0,66d51a04-5a89-4bb9-a892-4141181025b5
+02/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,30.0,66d613e0-2c27-4524-8b7a-927dde9c0fb1
+02/09/2024,Transferência enviada pelo Pix - 24265386 Antonio Cordeiro Costa - 24.265.386/0001-21 - CAIXA ECONOMICA FEDERAL (0104) Agência: 3880 Conta: 1292000000579713453-1,,-30.0,66d613e0-2c27-4524-8b7a-927dde9c0fb1
+02/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,65.7,66d635e8-7737-4b41-880c-a6fffcee5d2c
+02/09/2024,Transferência enviada pelo Pix - iFood - 14.380.200/0001-21 - ADYEN DO BRASIL IP LTDA. Agência: 1 Conta: 100000003-3,,-65.7,66d635e8-7737-4b41-880c-a6fffcee5d2c
+02/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,1500.0,66d675cc-4279-4737-9a3d-c1be926b330f
+02/09/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-1500.0,66d675cc-4279-4737-9a3d-c1be926b330f
+03/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,49.39,66d7495f-1418-41a1-b42c-d4f697ce5f3f
+03/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-49.39,66d7495f-1418-41a1-b42c-d4f697ce5f3f
+04/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,15.99,66d87644-9e1d-4c7c-bbac-ee3778c81ed8
+04/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-15.99,66d87644-9e1d-4c7c-bbac-ee3778c81ed8
+04/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,37.99,66d8da55-f221-47bf-a358-1217c2ab7316
+04/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-37.99,66d8da55-f221-47bf-a358-1217c2ab7316
+06/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,10.0,66db85ec-43f8-4966-a594-bc745f36c914
+06/09/2024,Transferência enviada pelo Pix - Cristiano Souza da Fonseca - •••.789.190-•• - Nubank (0260) Agência: 1 Conta: 18578641-8,,-10.0,66db85ec-43f8-4966-a594-bc745f36c914
+06/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,16.5,66db9131-07cb-49b2-b507-57c11c823c77
+06/09/2024,Transferência enviada pelo Pix - BETTER COMERCIO DE ALIMENTOS LTDA - 01.477.466/0001-45 - BCO SANTANDER (BRASIL) S.A. (0033) Agência: 3131 Conta: 13000580-5,,-16.5,66db9131-07cb-49b2-b507-57c11c823c77
+07/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,52.67,66dc5acf-d00e-406b-a194-b7905ab65083
+07/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-52.67,66dc5acf-d00e-406b-a194-b7905ab65083
+07/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,31.98,66dc5b68-333c-4d1f-9614-d38dc5055775
+07/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-31.98,66dc5b68-333c-4d1f-9614-d38dc5055775
+07/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,18.0,66dc7924-dbc6-4c33-8764-684a4caed5d7
+07/09/2024,Transferência enviada pelo Pix - Sabrina Amara Correia - •••.309.269-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 33814852-7,,-18.0,66dc7924-dbc6-4c33-8764-684a4caed5d7
+07/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,34.82,66dca17c-70d0-47a2-a87d-a2b7db9446d2
+07/09/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-34.82,66dca17c-70d0-47a2-a87d-a2b7db9446d2
+08/09/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,500.0,66dde812-91b8-4b38-9e32-8681e1beeb94
+08/09/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-500.0,66dde812-91b8-4b38-9e32-8681e1beeb94
+12/09/2024,Transferência Recebida - WEFIN LICENCIADORA S.A - 40.071.552/0001-05 - BCO BRADESCO S.A. (0237) Agência: 3391 Conta: 8790-4,,8387.1,66e32b5f-3b89-4c23-8e22-068c9bf44737
+12/09/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-8387.1,66e33e09-6ab4-45a3-9ecf-5a63fd71aa2c
+02/08/2024,Transferência Recebida - WEFIN LICENCIADORA S.A - 40.071.552/0001-05 - BCO BRADESCO S.A. (0237) Agência: 3391 Conta: 8790-4,,13000.0,66acf95c-0afa-4664-b553-445c3f214c0e
+03/08/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-13000.0,66ae9188-241d-4940-bfc3-8026396bab6b
+12/08/2024,Depósito de empréstimo,,4000.0,66b97d37-66c9-4673-a048-f58b07e5e3d1
+12/08/2024,Pagamento de boleto efetuado - PJBANK PAGAMENTOS S.A.,,-3312.9,66b97dd4-b0ab-413f-8588-45249f3e7c38
+12/08/2024,Transferência enviada pelo Pix - CAMARAO BEACH LTDA - 51.846.641/0001-00 - STONE IP S.A. (0197) Agência: 1 Conta: 8701161-5,,-139.59,66ba7b33-cc41-4acd-98de-1f52c08e3b83
+14/08/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-160.0,66bd4b18-5da9-4b38-841e-dd432c4ea321
+15/08/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-20.0,66be8ada-b70b-4b8d-8f59-3d99a5233b2b
+16/08/2024,Transferência enviada pelo Pix - Bruna Amancio dos Santos - •••.651.739-•• - BCO SANTANDER (BRASIL) S.A. (0033) Agência: 3176 Conta: 1068337-7,,-179.0,66bf5d86-a50b-429d-beca-558f8b681dc2
+16/08/2024,Transferência enviada pelo Pix - Tais Rodrigues Ramos - •••.880.840-•• - PAGSEGURO INTERNET IP S.A. (0290) Agência: 1 Conta: 11170502-6,,-10.0,66bfb9dc-963c-4021-8928-b9fe5fd1fae3
+16/08/2024,Transferência enviada pelo Pix - Uber - 17.895.646/0001-87 - EBANX IP LTDA. (0383) Agência: 1 Conta: 1000752180-1,,-13.92,66bfca2c-9509-41a4-ad31-062f43e4d037
+17/08/2024,Transferência Recebida - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,25.0,66c0a0f4-28a9-41a4-9fde-39336bf60045
+18/08/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-100.0,66c173cf-916f-430a-bfbe-e341c65a4ead
+19/08/2024,Pagamento de boleto efetuado - VIVO-PR/SC GLOBAL TE,,-78.67,66c0b093-7c3d-4540-b7b9-6767c2a34570
+22/08/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-10.92,66c72fa1-87ac-4660-af90-0df3219284e4
+24/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,250.0,66c9fa57-99d9-4f6b-97c4-906b1c2a519b
+24/08/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-250.0,66c9fa57-99d9-4f6b-97c4-906b1c2a519b
+26/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,98.8,66ccb4f7-e759-40d6-909e-65a988a1bdd3
+26/08/2024,Transferência enviada pelo Pix - BRITOPHARMA FCIA E PERF - 31.179.778/0001-33 - PINBANK IP (0529) Agência: 496 Conta: 190879-0,,-98.8,66ccb4f7-e759-40d6-909e-65a988a1bdd3
+26/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,40.57,66cce245-39dd-4efc-980e-7f380057cb75
+26/08/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-40.57,66cce245-39dd-4efc-980e-7f380057cb75
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,45.61,66cd41b8-afb6-4041-936c-04ae0935e91b
+27/08/2024,Transferência enviada pelo Pix - SERVICOS ONLINE BR - 20.110.153/0001-07 - ITAÚ UNIBANCO S.A. (0341) Agência: 246 Conta: 15141-9,,-45.61,66cd41b8-afb6-4041-936c-04ae0935e91b
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,8.0,66cdc6d9-0903-491f-8c56-2d3d70cc6e5e
+27/08/2024,Transferência enviada pelo Pix - Daiana Machado Meirelles - •••.581.420-•• - Nubank (0260) Agência: 1 Conta: 97320323-5,,-8.0,66cdc6d9-0903-491f-8c56-2d3d70cc6e5e
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,64.0,66cdcdc3-e46c-4b4a-8289-71b9c798fbb2
+27/08/2024,Transferência enviada pelo Pix - OLIMPO - 29.808.561/0001-01 - CCLA MAXI ALFA Agência: 3069 Conta: 471509-8,,-64.0,66cdcdc3-e46c-4b4a-8289-71b9c798fbb2
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,18.87,66cde695-b28a-42df-943b-4fcca8d42c23
+27/08/2024,Transferência enviada pelo Pix - MERCADO SUPERNORTE - 02.988.536/0001-92 - ITAÚ UNIBANCO S.A. (0341) Agência: 5821 Conta: 5005-0,,-18.87,66cde695-b28a-42df-943b-4fcca8d42c23
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,220.0,66cdff12-b08b-444f-bf49-d69df2c720d7
+27/08/2024,Transferência enviada pelo Pix - Reinaldo Conceiçao dos Santos - •••.090.129-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 74208844-6,,-220.0,66cdff12-b08b-444f-bf49-d69df2c720d7
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,100.1,66ce0273-f146-43b1-a136-e1dc444c454d
+27/08/2024,Transferência enviada pelo Pix - PAULO EDUARDO M.A DOS REIS LTDA - 42.356.177/0001-75 - PAGSEGURO INTERNET IP S.A. (0290) Agência: 1 Conta: 31358762-8,,-100.1,66ce0273-f146-43b1-a136-e1dc444c454d
+27/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,100.0,66ce1577-ba05-4660-9f52-39962d2ac688
+27/08/2024,Transferência enviada pelo Pix - Reinaldo Conceiçao dos Santos - •••.090.129-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 74208844-6,,-100.0,66ce1577-ba05-4660-9f52-39962d2ac688
+28/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,35.0,66cf197c-d399-4193-870b-d76183860f9a
+28/08/2024,Transferência enviada pelo Pix - SABRINA AMARA CORREIA 00730926907 - 43.233.243/0001-82 - CLOUDWALK IP LTDA (0542) Agência: 1 Conta: 7440663-3,,-35.0,66cf197c-d399-4193-870b-d76183860f9a
+28/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,150.0,66cf34b6-da11-4bbd-9f98-c26f6aa2fa0c
+28/08/2024,Transferência enviada pelo Pix - Elizete Silva Camilo - •••.353.638-•• - BCO BRADESCO S.A. (0237) Agência: 1662 Conta: 34752-3,,-150.0,66cf34b6-da11-4bbd-9f98-c26f6aa2fa0c
+28/08/2024,Valor adicionado na conta por cartão de crédito - Valor adicionado para Pix no Crédito,,54.9,66cf39fb-1ad0-4049-a0cc-adddc501dd5f
+28/08/2024,Transferência enviada pelo Pix - Pagarme Pagamentos SA - 18.727.053/0001-74 - STONE IP S.A. (0197) Agência: 1 Conta: 16714636-4,,-54.9,66cf39fb-1ad0-4049-a0cc-adddc501dd5f
+02/07/2024,Transferência Recebida - WEFIN LICENCIADORA S.A - 40.071.552/0001-05 - BCO BRADESCO S.A. (0237) Agência: 3391 Conta: 8790-4,,9100.0,66843f2b-0135-4735-9480-41cd3edb7f68
+03/07/2024,Transferência enviada pelo Pix - Thallysson Klein Flor - •••.991.630-•• - NU PAGAMENTOS - IP (0260) Agência: 1 Conta: 89137639-9,,-9100.0,66855df3-ee22-463d-bcae-8a623daabd98
