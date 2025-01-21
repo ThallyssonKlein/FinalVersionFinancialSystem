@@ -1,0 +1,254 @@
+Data,Título,Tipo,Valor,Descrição,Transação
+04 de Janeiro,Pix enviado,PIX,"−R$ 25,44","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",eca5e5d2-6bc7-444f-a5f9-2f9491f6854f
+04 de Janeiro,Pix enviado,PIX,"−R$ 18,29","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",7351a739-a3a2-4ecc-a868-c971f99641ce
+03 de Janeiro,Pix enviado,PIX,"−R$ 42,50","FELIPE DE OLIVEIRA FOGLIATTO 09788434959
+Instituição: STONE IP S.A.",edd3f8a2-e059-400c-9475-d7797468e007
+03 de Janeiro,Pix enviado,PIX,"−R$ 57,45","IFOODCOM AGENCIA DE RESTAURANTES ONLINE SA
+Instituição: BCO BRADESCO S.A.",9da56d95-2d26-45f9-8a22-fdfe60eb64a9
+03 de Janeiro,Pix enviado,PIX,"−R$ 16,92","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",4cef4a18-59d7-4373-bd57-052921161e59
+03 de Janeiro,Rendimentos,INCOME,"+R$ 0,02",,1455733665
+03 de Janeiro,Guardado no Cofrinho,PIGGY_BANK_CREDIT,"−R$ 120,00",,345488220
+03 de Janeiro,Resgatado do Cofrinho,PIGGY_BANK_DEBIT,"+R$ 54,12",,345485565
+03 de Janeiro,Pix enviado,PIX,"−R$ 9,99","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",acc70463-ab04-47e1-869c-9d86e54120af
+03 de Janeiro,Pix enviado,PIX,"−R$ 96,80","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",6bf2ffe6-0ee7-4297-9ec4-0f4cfd51b539
+03 de Janeiro,Pix recebido,PIX,"+R$ 400,00","Eduarda Hoff Sombrio
+Instituição: NU PAGAMENTOS - IP",5498857374
+31 de Dezembro,Pix enviado,PIX,"−R$ 65,00","FELIPE DE OLIVEIRA FOGLIATTO 09788434959
+Instituição: STONE IP S.A.",1555991b-c73a-417e-91b5-a98db7c87280
+31 de Dezembro,Pix recebido,PIX,"+R$ 70,00","Ricardo Dos Passos Cavalheiro
+Instituição: BANCO BTG PACTUAL S.A.",5483273596
+31 de Dezembro,Pix enviado,PIX,"−R$ 10,00","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",928bb727-c16b-44c5-8a7e-0e3f2ee6331d
+31 de Dezembro,Pix enviado,PIX,"−R$ 50,00","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",cdcaeac9-6323-4407-af84-884bff9d9184
+31 de Dezembro,Pix recebido,PIX,"+R$ 60,00","FELIPE VIEIRA MOLINA GUIMARAES
+Instituição: ITAU UNIBANCO S.A.",5481993059
+30 de Dezembro,Pix enviado,PIX,"−R$ 10,98","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",68d9cfc3-cf63-4545-9492-643d891371cd
+30 de Dezembro,Pix recebido,PIX,"+R$ 10,00","Eduarda Hoff Sombrio
+Instituição: BANCO ITAUCARD S.A.",5473601571
+30 de Dezembro,Pix enviado,PIX,"−R$ 3,90","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",85056da1-e34e-45f0-9041-4400c2443e65
+28 de Dezembro,Pix enviado,PIX,"−R$ 12,29","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",5f63a539-c9c0-40d9-8e8d-9a6a36f093ad
+27 de Dezembro,Pix enviado,PIX,"−R$ 11,98","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",58540f34-caa5-4288-be3e-6ffa89d8cd0c
+27 de Dezembro,Pix enviado,PIX,"−R$ 120,67","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",5a963085-544d-4196-9b04-ec45c4fad988
+27 de Dezembro,Pix recebido,PIX,"+R$ 150,00","Paulo Cesar Pereira
+Instituição: NU PAGAMENTOS - IP",5451088156
+25 de Dezembro,Pix enviado,PIX,"−R$ 149,19","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",d349744f-3e20-44c7-a7b7-e6cf6b326885
+25 de Dezembro,Pix devolvido,PIX,"+R$ 7,99",Instituição: EBANX IP LTDA.,5434117817
+25 de Dezembro,Pix enviado,PIX,"−R$ 60,96","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",fdb1ed4a-1ad0-4990-add8-2dbca17a884a
+24 de Dezembro,Pix enviado,PIX,"−R$ 73,49","FELIPE DE OLIVEIRA FOGLIATTO 09788434959
+Instituição: STONE IP S.A.",7e11bc48-f193-4e62-aed1-32ef5f78a137
+24 de Dezembro,Pix devolvido,PIX,"+R$ 17,99",Instituição: EBANX IP LTDA.,5432118307
+24 de Dezembro,Pix enviado,PIX,"−R$ 17,80","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",c7383677-3928-4fb6-830b-73cec43b97df
+24 de Dezembro,Pix enviado,PIX,"−R$ 17,99","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",08f502bb-e98c-43e4-b3fe-e15bf69e9be5
+24 de Dezembro,Pix enviado,PIX,"−R$ 91,60","IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.
+Instituição: ZOOP MEIOS DE PAGAMENTO",8e5c90dc-085a-4a64-b021-3d2cd9294d29
+24 de Dezembro,Pix enviado,PIX,"−R$ 14,95","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",9f333a35-c745-4e6c-b891-93531b09e71a
+24 de Dezembro,Pix recebido,PIX,"+R$ 400,00","Paulo Cesar Pereira
+Instituição: NU PAGAMENTOS - IP",5427627776
+19 de Dezembro,Pix enviado,PIX,"−R$ 1.254,83","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",7878ccd7-940c-48e1-80c0-787a1202101e
+19 de Dezembro,Pix enviado,PIX,"−R$ 114,99","FELIPE DE OLIVEIRA FOGLIATTO 09788434959
+Instituição: PAGSEGURO INTERNET IP S.A.",4093b078-e8a8-4767-b64f-2d076771589c
+18 de Dezembro,Pix enviado,PIX,"−R$ 15,04","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",f097dbf6-7aff-4255-8ff8-f8e6f5c1ad4b
+17 de Dezembro,Pix enviado,PIX,"−R$ 50,00","Alessandro Dos Santos Correa
+Instituição: MERCADO PAGO IP LTDA.",de88195e-1b4d-424f-85c6-06b636905a1b
+17 de Dezembro,Pix enviado,PIX,"−R$ 400,00","Alessandro Dos Santos Correa
+Instituição: MERCADO PAGO IP LTDA.",642755fe-d5c5-4371-8092-f152c1bac8c8
+17 de Dezembro,Pix enviado,PIX,"−R$ 48,56","iFood
+Instituição: ADYEN DO BRASIL IP LTDA.",dbca5f48-a009-4d8a-97f1-419b4bcc1352
+16 de Dezembro,Pix enviado,PIX,"−R$ 101,49","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",d1e0aab6-d1fd-4044-a6ec-e4740723c618
+16 de Dezembro,Pix enviado,PIX,"−R$ 53,80","BTC SUPLEMENTOS LTDA
+Instituição: PAGSEGURO INTERNET IP S.A.",1a360fe5-28d1-498c-a3ff-ae2dd3ed26ca
+16 de Dezembro,Pix enviado,PIX,"−R$ 1.020,00","Alessandro Dos Santos Correa
+Instituição: MERCADO PAGO IP LTDA.",8d85fd1e-00b1-42a3-a2f9-8405738137c0
+16 de Dezembro,Pix enviado,PIX,"−R$ 95,99","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",e7528831-ff6f-4cb1-939d-c9e0eb0b02cb
+16 de Dezembro,Pix enviado,PIX,"−R$ 19,00","SABRINA AMARA CORREIA 00730926907
+Instituição: CLOUDWALK IP LTDA",94af813c-d718-46eb-ba2f-b1ba86b501f3
+16 de Dezembro,Pix enviado,PIX,"−R$ 86,17","PIX Marketplace
+Instituição: MERCADO PAGO IP LTDA.",03890508-c907-4180-9317-656473c6434c
+15 de Dezembro,Guardado no Cofrinho,PIGGY_BANK_CREDIT,"−R$ 20,00",,327328401
+15 de Dezembro,Guardado no Cofrinho,PIGGY_BANK_CREDIT,"−R$ 54,00",,327328147
+15 de Dezembro,Pix recebido,PIX,"+R$ 3.311,97","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",5351854434
+15 de Dezembro,Pix recebido,PIX,"+R$ 21,90","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",5351691470
+15 de Dezembro,Pix enviado,PIX,"−R$ 340,81","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",56b31a27-9053-4a5c-994b-3e3b49d83dba
+15 de Dezembro,Pix enviado,PIX,"−R$ 52,49","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",a743471f-d14e-4925-ad69-51eaab4da9cc
+15 de Dezembro,Compra realizada,PICPAY_DIGITAL_GOODS_PAYMENT,"−R$ 21,90",PicPay Shop,a1b15637-ccc4-495d-ba0c-85ececd7a49e
+15 de Dezembro,Pix enviado,PIX,"−R$ 51,22","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",dcb6799d-5a2b-41b2-b45b-588e9c022612
+14 de Dezembro,Pix enviado,PIX,"−R$ 20,00","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",5742ac7f-9b61-479c-b107-0278241895e6
+14 de Dezembro,Pix enviado,PIX,"−R$ 62,00","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",3ca8f6bc-f8d8-4eac-ba63-3631c06d6e79
+14 de Dezembro,Pix enviado,PIX,"−R$ 21,90","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",906084fe-978a-4e43-958b-1deab0c453e3
+14 de Dezembro,Pix enviado,PIX,"−R$ 70,83","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",fbf1061f-1fac-4158-bdd6-6f2d652dba2b
+13 de Dezembro,Pix enviado,PIX,"−R$ 16,48","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",3dee0dcf-f291-4bfd-8bd4-740ea00d7020
+13 de Dezembro,Pix enviado,PIX,"−R$ 50,98","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",fee4d494-1cca-40c4-901b-a2f49cc1643e
+13 de Dezembro,Pix enviado,PIX,"−R$ 38,97","MERCADO SUPERNORTE
+Instituição: ITAÚ UNIBANCO S.A.",1bf04af6-132b-485f-a2c1-9b49ca635d44
+12 de Dezembro,Pix enviado,PIX,"−R$ 16,92","FARMACIA BOM JESUS
+Instituição: CCLA MAXI ALFA",8252165f-863c-4680-a487-1e9841b0e751
+12 de Dezembro,Pix enviado,PIX,"−R$ 1.513,68","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",9152c311-fa35-4d43-acad-92101328878d
+12 de Dezembro,Pix recebido,PIX,"+R$ 2.275,00","LEANDRO FARIA MORAES 67341110082
+Instituição: STONE IP S.A.",5321955657
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",910d1040-6eba-4d2a-9bab-bab8435f5744
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",2d62ae49-fc1c-42c2-ba0e-3554d473e4c1
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",80cf211a-730d-43c6-bc59-e14443345a55
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",c2538ed4-237d-4f52-ba93-090d091fd1df
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",7078c062-8b0b-4393-871e-eb239177f759
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",d9ef12ad-a7d7-4a52-932d-6f577d367f71
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",0ca6d41e-b248-4993-a41d-d0b8bfcf1559
+11 de Dezembro,Pix recebido,PIX,"+R$ 10,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFI S.A. - IP",5317620580
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",b69b35b8-8988-4bed-a7cd-546ad3eb162c
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",70fd3d15-6946-465f-9bdf-403a3c9b9367
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",e8649eb2-b582-4239-bc65-4ecad4f078de
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",bdebba5b-a3fe-4275-b9e8-5c4852abe82b
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",0d6e92a9-f552-482d-9713-b80dd5ed9e8e
+11 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",30a93b28-7003-474f-b1f6-ced0e10b60bf
+11 de Dezembro,Pix enviado,PIX,"−R$ 1.080,00","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",c84ac11a-36bf-42df-9509-370fd68b5597
+10 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",b611528c-4408-4bc1-8d8c-d090eaeac872
+10 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",e55cb424-08ce-4799-9c24-6472e4a484fc
+10 de Dezembro,Adição de dinheiro,CASHIN_BILL,"+R$ 80,00",Boleto bancário,294505309
+10 de Dezembro,Adição de dinheiro,CASHIN_BILL,"+R$ 1.000,00",Boleto bancário,294505235
+10 de Dezembro,Pix enviado,PIX,"−R$ 14,82","Francisco Oliveira Virgulino
+Instituição: MERCADO PAGO IP LTDA.",84b5af85-0777-451f-bf8d-6f6a677be236
+10 de Dezembro,Pix devolvido,PIX,"+R$ 20,29","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",5306167995
+10 de Dezembro,Pix enviado,PIX,"−R$ 20,29","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",f4f89f4c-760d-48db-8777-b507c7c69140
+09 de Dezembro,Pix recebido,PIX,"+R$ 20,00","Ricardo Dos Passos Cavalheiro
+Instituição: BANCO BTG PACTUAL S.A.",5300479851
+06 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",159e8c73-fcc8-4ace-93be-0a0ab8ae11ce
+05 de Dezembro,Pix enviado,PIX,"−R$ 57,80","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",5d8751b6-e8e9-4625-bb0d-1b2f2b1867e3
+05 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",b6344a68-0ee3-4c93-b0bc-dd15ed33374c
+03 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",d5327f78-20e5-4461-9105-d76c550ce945
+03 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",f793cb9a-14b4-4961-a608-8a14445dcf34
+03 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",2cbf5df7-24e3-411e-9d31-36e86b2686ce
+03 de Dezembro,Adição de dinheiro,CASHIN_BILL,"+R$ 57,80",Boleto bancário,294234939
+03 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",b9762790-f95c-4314-ac6a-0ee6eee01d88
+02 de Dezembro,Pix recebido,PIX,"+R$ 9,00","EDUARDO M IOST
+Instituição: BCO DO BRASIL S.A.",5239254916
+02 de Dezembro,Pix enviado,PIX,"−R$ 2.783,02","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",1e85f697-dee6-45f1-a170-7c3caf75f0a6
+02 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",6856126d-e76a-4dc5-ab4c-3813e3699fdf
+01 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",a336c9d9-8a6b-44a1-b3b9-94d5a82bd1bd
+01 de Dezembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",3fbffe6f-e46d-4378-9e0c-bd022057a552
+30 de Novembro,Pix enviado,PIX,"−R$ 7,56","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",46ce7d93-1640-4963-9d1b-d8c547e2adcb
+29 de Novembro,Pix enviado,PIX,"−R$ 65,00","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",c6f83ab8-8e96-40fa-a17e-9befe0575c7a
+29 de Novembro,Pix enviado,PIX,"−R$ 72,00","Ricardo dos Passos Cavalheiro
+Instituição: NU PAGAMENTOS - IP",6a519d86-1168-40b3-9eb0-b21d2ad436d5
+28 de Novembro,Pix recebido,PIX,"+R$ 22,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFI S.A. - IP",5203871853
+28 de Novembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",5fcd28a6-91a7-4d1e-b039-dd1fe748e31f
+28 de Novembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",b96270b8-5653-4424-83c6-5b7d933de6b8
+28 de Novembro,Pix enviado,PIX,"−R$ 150,00","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",b072a67d-d65e-4e65-adea-379529c0dfb4
+28 de Novembro,Pix enviado,PIX,"−R$ 10,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",ec8cc401-012e-47c4-907f-da183465a475
+28 de Novembro,Pix enviado,PIX,"−R$ 10,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",368e2a13-1cd0-44bd-89db-378fe6d53490
+27 de Novembro,Pix enviado,PIX,"−R$ 20,00","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",40bd339a-16e6-41be-ae83-3250f2be2010
+27 de Novembro,Pix enviado,PIX,"−R$ 62,99","IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.
+Instituição: ZOOP MEIOS DE PAGAMENTO",ca559518-7ec8-4b64-ab40-c6f4bf48757a
+27 de Novembro,Pix devolvido,PIX,"+R$ 54,99","IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.
+Instituição: ZOOP TECNOLOGIA E MEIOS DE PAGAMENTO S.A. ",5194866947
+27 de Novembro,Pix enviado,PIX,"−R$ 54,99","IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.
+Instituição: ZOOP MEIOS DE PAGAMENTO",3c7e2735-b07b-47ea-8412-62c25ee339bb
+26 de Novembro,Pix enviado,PIX,"−R$ 465,76","DIMED S/A DISTRIBUIDORA DE MEDICAMENTOS                     
+Instituição: BCO BRADESCO S.A.",aea3af08-e324-4fe3-a3d3-4ce55e872f7c
+26 de Novembro,Pix recebido,PIX,"+R$ 3.629,33","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",5184442709
+24 de Novembro,Pix enviado,PIX,"−R$ 3.661,33","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",46bd6cd1-93dc-46ec-9aa6-91fce17ac13b
+23 de Novembro,Pix devolvido,PIX,"+R$ 5,91",Instituição: EBANX IP LTDA.,5166349160
+23 de Novembro,Pix enviado,PIX,"−R$ 5,91","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",fce673db-e7a8-4b3f-9a4d-dffefbded915
+22 de Novembro,Pix enviado,PIX,"−R$ 54,94","IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.
+Instituição: ZOOP MEIOS DE PAGAMENTO",75ffda9e-6192-4333-ad45-4224c4ea97ee
+21 de Novembro,Pix enviado,PIX,"−R$ 10,91","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",f7d5614f-8def-4b58-b759-41470a4b53b8
+21 de Novembro,Cashback,CASHBACK,"−R$ 2,19",Cashback expirado,4b50031d-5de9-47a8-97f0-1c5caa610dab
+16 de Novembro,Pix enviado,PIX,"−R$ 13,98","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",f3dfa0c5-c297-4bc9-8e7c-df0cf3212e40
+16 de Novembro,Pix enviado,PIX,"−R$ 13,71","UBER DO BRASIL TECNOLOGIA LTDA.
+Instituição: EBANX IP LTDA.",dc7a25f7-c930-4777-b662-d05f7dd38ffa
+15 de Novembro,Pix enviado,PIX,"−R$ 27,83","IFOOD.COM AGENCIA DE RESTAURANTES ONLINE S.A.
+Instituição: ZOOP MEIOS DE PAGAMENTO",a4365e0c-8a68-452e-b083-09b8720dfd97
+15 de Novembro,Pix enviado,PIX,"−R$ 185,18","CIA LATINO AMERICANA DE MEDICAMENTOS
+Instituição: MERCADO PAGO IP LTDA.",9384315e-aa5c-46d0-a3a2-0d367455d799
+15 de Novembro,Pix enviado,PIX,"−R$ 134,00","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",636ce2a2-0647-425c-8d0b-d176df9f3ee9
+14 de Novembro,Pix enviado,PIX,"−R$ 950,00","Eduarda Hoff Sombrio
+Instituição: BCO ITAUCARD S.A.",df652799-a6f2-4201-adae-d5e9d14cdbf1
+13 de Novembro,Pix enviado,PIX,"−R$ 1,00","44224564 LEANDRO FARIA MORAES
+Instituição: EFÍ S.A. - IP",27603919-ce08-47ce-ba5d-4cbde568e348
+13 de Novembro,Pix enviado,PIX,"−R$ 54,00","BTC SUPLEMENTOS LTDA
+Instituição: PAGSEGURO INTERNET IP S.A.",f0123e41-447a-466f-a558-4361e8ba83bc
+13 de Novembro,Pix recebido,PIX,"+R$ 21,90","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",5088482990
+13 de Novembro,Pix recebido,PIX,"+R$ 4.500,00","Eduarda Hoff Sombrio
+Instituição: BANCO ITAUCARD S.A.",5087950710
+13 de Novembro,Pix enviado,PIX,"−R$ 21,25","Claro
+Instituição: CLARO PAY",65564693-ce0f-4273-9132-dc85e61410cf
+13 de Novembro,Cashback,CASHBACK,"+R$ 2,19",,2723e6e4-3d4f-46ed-af20-5e4f116fcd11
+13 de Novembro,Compra realizada,PICPAY_DIGITAL_GOODS_PAYMENT,"−R$ 21,90",PicPay Shop,2723e6e4-3d4f-46ed-af20-5e4f116fcd11
+13 de Novembro,Pix recebido,PIX,"+R$ 628,13","Thallysson Klein Flor
+Instituição: MERCADO PAGO IP LTDA.",5086692071
