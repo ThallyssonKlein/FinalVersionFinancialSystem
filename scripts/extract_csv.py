@@ -10,7 +10,7 @@ def extrair(arquivo_origem, arquivo_destino):
         for linha in leitor:
             if None in linha.keys():
                 continue
-            if "iFood" in linha["Descrição"]:
+            if "IFOOD" in linha["Descrição"]:
                 linhas_ifood.append(linha)
             else:
                 linhas_restantes.append(linha)
