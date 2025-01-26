@@ -1,6 +1,6 @@
 package com.expending.rules_engine.domain.config.bo;
 
-public enum Unity {
+public enum UnityBO {
     DAY,
     WEEK,
     MONTH,

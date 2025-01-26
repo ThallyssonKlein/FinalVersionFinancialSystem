@@ -1,7 +1,7 @@
 package com.expending.rules_engine.ports.inbound.http.api.v1.dto.inbound.determine_configs_for_transactions;
 
-import com.expending.rules_engine.domain.config.bo.Config;
-import com.expending.rules_engine.domain.transaction.bo.Transaction;
+import com.expending.rules_engine.ports.inbound.http.api.v1.dto.outbound.ConfigDTO;
+import com.expending.rules_engine.ports.inbound.http.api.v1.dto.outbound.TransactionDTO;
 import lombok.*;
 
 import java.util.List;
@@ -13,8 +13,8 @@ import java.util.Map;
 @NoArgsConstructor
 @ToString
 public class DetermineConfigsForTransactionsInboundDTO {
-    private Config default_config;
-    private List<Config> configs;
-    private List<Transaction> transactions;
-    private List<Map<String, List<Transaction>>> transactions_grouped_by_date;
+    private ConfigDTO default_config;
+    private List<ConfigDTO> configs;
+    private List<TransactionDTO> transactions;
+    private List<Map<String, List<TransactionDTO>>> transactions_grouped_by_date;
 }

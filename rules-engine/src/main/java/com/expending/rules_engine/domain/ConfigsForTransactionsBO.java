@@ -1,6 +1,6 @@
 package com.expending.rules_engine.domain;
 
-import com.expending.rules_engine.domain.config.bo.Config;
+import com.expending.rules_engine.domain.config.bo.ConfigBO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +12,6 @@ import java.util.Map;
 @Setter
 @AllArgsConstructor
 public class ConfigsForTransactionsBO {
-    Map<String, Config> configTransactionAssociation;
+    Map<String, ConfigBO> configTransactionAssociation;
     List<PairBO> pairBOS;
 }

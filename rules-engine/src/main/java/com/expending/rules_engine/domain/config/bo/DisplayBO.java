@@ -1,11 +1,13 @@
 package com.expending.rules_engine.domain.config.bo;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-public class Display {
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class DisplayBO {
     private String source;
     private Integer amount;
 }

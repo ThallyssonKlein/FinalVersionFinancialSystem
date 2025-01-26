@@ -3,10 +3,10 @@ package com.expending.rules_engine.domain.config;
 import com.expending.rules_engine.domain.ConfigsForTransactionsBO;
 import com.expending.rules_engine.domain.PairBO;
 import com.expending.rules_engine.ports.outbound.database.SavedTransactionsRepository;
-import com.expending.rules_engine.domain.config.bo.Between;
-import com.expending.rules_engine.domain.config.bo.Config;
-import com.expending.rules_engine.domain.config.bo.Rule;
-import com.expending.rules_engine.domain.transaction.bo.Transaction;
+import com.expending.rules_engine.domain.config.bo.BetweenBO;
+import com.expending.rules_engine.domain.config.bo.ConfigBO;
+import com.expending.rules_engine.domain.config.bo.RuleBO;
+import com.expending.rules_engine.domain.transaction.bo.TransactionBO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,31 +37,31 @@ public class ConfigService {
         return camelCase.replaceAll("([a-z])([A-Z]+)", "$1_$2").toLowerCase();
     }
 
-    private Between<?> createBetweenInstance(String type, Object value1, Object value2) {
+    private BetweenBO<?> createBetweenInstance(String type, Object value1, Object value2) {
         switch (type) {
             case "NUMBER":
-                return new Between<>((Integer) value1, (Integer) value2);
+                return new BetweenBO<>((Integer) value1, (Integer) value2);
             case "DATE":
-                return new Between<>((Date) value1, (Date) value2);
+                return new BetweenBO<>((Date) value1, (Date) value2);
             case "STRING":
-                return new Between<>((String) value1, (String) value2);
+                return new BetweenBO<>((String) value1, (String) value2);
             default:
                 throw new IllegalArgumentException("Unsupported type: " + type);
         }
     }
 
-    private boolean validateContains(Rule rule, Transaction transaction, boolean shouldReturnConfig) {
-        if (rule.getProperty() != null && rule.getContains() != null) {
-            if (rule.getContains() instanceof String) {
-                if (this.getFieldValue(transaction, rule.getProperty()).toString().contains((String) rule.getContains())) {
+    private boolean validateContains(RuleBO ruleBO, TransactionBO transactionBO, boolean shouldReturnConfig) {
+        if (ruleBO.getProperty() != null && ruleBO.getContains() != null) {
+            if (ruleBO.getContains() instanceof String) {
+                if (this.getFieldValue(transactionBO, ruleBO.getProperty()).toString().contains((String) ruleBO.getContains())) {
                     shouldReturnConfig = true;
                 } else {
                     shouldReturnConfig = false;
                 }
-            } else if (rule.getContains() instanceof List) {
-                List<String> containsList = (List<String>) rule.getContains();
+            } else if (ruleBO.getContains() instanceof List) {
+                List<String> containsList = (List<String>) ruleBO.getContains();
                 for (String contains: containsList) {
-                    if (this.getFieldValue(transaction, rule.getProperty()).toString().contains(contains)) {
+                    if (this.getFieldValue(transactionBO, ruleBO.getProperty()).toString().contains(contains)) {
                         shouldReturnConfig = true;
                     } else {
                         shouldReturnConfig = false;
@@ -73,27 +73,27 @@ public class ConfigService {
         return shouldReturnConfig;
     }
 
-    private boolean validateBetween(Between<?> between, Rule rule, Object field, boolean shouldReturnConfig) {
-        if (between != null) {
-            switch (rule.getType()) {
+    private boolean validateBetween(BetweenBO<?> betweenBO, RuleBO ruleBO, Object field, boolean shouldReturnConfig) {
+        if (betweenBO != null) {
+            switch (ruleBO.getTypeBO()) {
                 case NUMBER -> {
-                    if ((Integer) field > (Integer) between.getValue1()
-                            && (Integer) field < (Integer) between.getValue2()) {
+                    if ((Integer) field > (Integer) betweenBO.getValue1()
+                            && (Integer) field < (Integer) betweenBO.getValue2()) {
                         shouldReturnConfig = true;
                     } else {
                         shouldReturnConfig = false;
                     }
                 }
                 case DATE -> {
-                    if (((Date) field).after((Date) between.getValue1())
-                            && ((Date) field).before((Date) between.getValue2())) {
+                    if (((Date) field).after((Date) betweenBO.getValue1())
+                            && ((Date) field).before((Date) betweenBO.getValue2())) {
                         shouldReturnConfig = true;
                     } else {
                         shouldReturnConfig = false;
                     }
                 }
                 case STRING -> {
-                    throw new IllegalArgumentException("Unsupported type: " + rule.getType());
+                    throw new IllegalArgumentException("Unsupported type: " + ruleBO.getTypeBO());
                 }
             }
         }
@@ -101,37 +101,37 @@ public class ConfigService {
         return shouldReturnConfig;
     }
 
-    private boolean isConfigForThisTransaction(Config config, Transaction transaction) {
+    private boolean isConfigForThisTransaction(ConfigBO configBO, TransactionBO transactionBO) {
         boolean shouldReturnConfig = false;
-        for (Rule rule : config.getRules()) {
-            if (config.getUseCalculated() != null) {
-                Object usedInCalculationFieldValue = this.getFieldValue(config.getUseCalculated(), rule.getUseInCalculation()) != null;
-                Between<?> between = this.createBetweenInstance(rule.getType().name(), rule.getBetween().getValue1(), rule.getBetween().getValue2());
-                shouldReturnConfig = validateBetween(between, rule, usedInCalculationFieldValue, shouldReturnConfig);
+        for (RuleBO ruleBO : configBO.getRuleBOS()) {
+            if (configBO.getUseCalculatedBO() != null) {
+                Object usedInCalculationFieldValue = this.getFieldValue(configBO.getUseCalculatedBO(), ruleBO.getUseInCalculation()) != null;
+                BetweenBO<?> betweenBO = this.createBetweenInstance(ruleBO.getTypeBO().name(), ruleBO.getBetweenBO().getValue1(), ruleBO.getBetweenBO().getValue2());
+                shouldReturnConfig = validateBetween(betweenBO, ruleBO, usedInCalculationFieldValue, shouldReturnConfig);
             } else {
-                Between<?> between = this.createBetweenInstance(rule.getType().name(), rule.getBetween().getValue1(), rule.getBetween().getValue2());
-                shouldReturnConfig = validateBetween(between, rule, this.getFieldValue(transaction, rule.getProperty()), shouldReturnConfig);
+                BetweenBO<?> betweenBO = this.createBetweenInstance(ruleBO.getTypeBO().name(), ruleBO.getBetweenBO().getValue1(), ruleBO.getBetweenBO().getValue2());
+                shouldReturnConfig = validateBetween(betweenBO, ruleBO, this.getFieldValue(transactionBO, ruleBO.getProperty()), shouldReturnConfig);
             }
 
-            shouldReturnConfig = validateContains(rule, transaction, shouldReturnConfig);
+            shouldReturnConfig = validateContains(ruleBO, transactionBO, shouldReturnConfig);
 
-            if (rule.getEquals() != null) {
-                if (this.getFieldValue(transaction, rule.getProperty()).equals(rule.getEquals())) {
+            if (ruleBO.getEquals() != null) {
+                if (this.getFieldValue(transactionBO, ruleBO.getProperty()).equals(ruleBO.getEquals())) {
                     shouldReturnConfig = true;
                 } else {
                     shouldReturnConfig = false;
                 }
             }
 
-            if (rule.getFrequency() != null) {
-                List<Transaction> transactionsFrequency = this.savedTransactionsRepository.findTransactionsInLastXFrequencyX(rule.getFrequency());
+            if (ruleBO.getFrequencyBO() != null) {
+                List<TransactionBO> transactionsFrequency = this.savedTransactionsRepository.findTransactionsInLastXFrequencyX(ruleBO.getFrequencyBO());
                 boolean isThisConfigCorrectForThisTransactionFrequency = false;
                 int searchedNumbers = 0;
-                for (Transaction transactionFrequency : transactionsFrequency) {
-                    if (rule.getFrequency().getTargetNumber() > 0 && searchedNumbers == rule.getFrequency().getTargetNumber()) {
-                        isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(config, transactionFrequency);
-                    } else if (rule.getFrequency().getTargetNumber() == 0) {
-                        isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(config, transactionFrequency);
+                for (TransactionBO transactionBOFrequency : transactionsFrequency) {
+                    if (ruleBO.getFrequencyBO().getTargetNumber() > 0 && searchedNumbers == ruleBO.getFrequencyBO().getTargetNumber()) {
+                        isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(configBO, transactionBOFrequency);
+                    } else if (ruleBO.getFrequencyBO().getTargetNumber() == 0) {
+                        isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(configBO, transactionBOFrequency);
                         break;
                     }
 
@@ -148,40 +148,40 @@ public class ConfigService {
         return shouldReturnConfig;
     }
 
-    public ConfigsForTransactionsBO determineConfigsForTransactions(Config defaultConfig, List<Config> configs,
-                                                                    List<Transaction> transactions,
-                                                                    TransactionsGroupedByDateBO transactionsGroupedByDateBO) {
-        Map<String, Config> configMap = new HashMap<>();
+    public ConfigsForTransactionsBO determineConfigsForTransactions(ConfigBO defaultConfigBO, List<ConfigBO> configBOS,
+                                                                    List<TransactionBO> transactionBOS,
+                                                                    List<Map<String, List<TransactionBO>>> transactionsGroupedByDateBO) {
+        Map<String, ConfigBO> configMap = new HashMap<>();
         List<PairBO> pairBOS = new ArrayList<>();
-        for (Transaction transaction: transactions) {
+        for (TransactionBO transactionBO : transactionBOS) {
             boolean puttedInTheMapOrPair = false;
-            for (Config config: configs) {
-                boolean isThisConfigCorrectForThisTransaction = this.isConfigForThisTransaction(config, transaction);
+            for (ConfigBO configBO : configBOS) {
+                boolean isThisConfigCorrectForThisTransaction = this.isConfigForThisTransaction(configBO, transactionBO);
                 if (isThisConfigCorrectForThisTransaction) {
-                    if (config.getFindPair() != null) {
-                        Date currentDate = transaction.getDate();
+                    if (configBO.getFindPairBO() != null) {
+                        Date currentDate = transactionBO.getDate();
                         if (transactionsGroupedByDateBO.getDate().equals(currentDate)) {
-                            for (Transaction pair : transactionsGroupedByDateBO.getTransactions()) {
-                                boolean isThisConfigCorrectForThisTransactionPair = this.isConfigForThisTransaction(config, pair);
+                            for (TransactionBO pair : transactionsGroupedByDateBO.getTransactions()) {
+                                boolean isThisConfigCorrectForThisTransactionPair = this.isConfigForThisTransaction(configBO, pair);
                                 if (isThisConfigCorrectForThisTransactionPair) {
                                     pairBOS.add(new PairBO(
-                                            config.getFindPair().getPairName(),
-                                            config,
-                                            Arrays.asList(transaction, pair)
+                                            configBO.getFindPairBO().getPairName(),
+                                            configBO,
+                                            Arrays.asList(transactionBO, pair)
                                     ));
                                     puttedInTheMapOrPair = true;
                                 }
                             }
                         }
                     } else {
-                        configMap.put(transaction.getId(), config);
+                        configMap.put(transactionBO.getId(), configBO);
                         puttedInTheMapOrPair = true;
                     }
                 }
             }
 
             if (!puttedInTheMapOrPair) {
-                configMap.put(transaction.getId(), defaultConfig);
+                configMap.put(transactionBO.getId(), defaultConfigBO);
             }
         }
 

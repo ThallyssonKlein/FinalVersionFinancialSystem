@@ -1,13 +1,15 @@
 package com.expending.rules_engine.domain.config.bo;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Getter
 @Setter
-public class Use {
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class UseBO {
     private String category;
     private String subcategory;
     private String defaultName;

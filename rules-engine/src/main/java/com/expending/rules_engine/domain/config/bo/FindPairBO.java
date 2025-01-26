@@ -1,10 +1,12 @@
 package com.expending.rules_engine.domain.config.bo;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
-public class FindPair {
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class FindPairBO {
     private String pairName;
 }

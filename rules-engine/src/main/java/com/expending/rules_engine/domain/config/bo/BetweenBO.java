@@ -1,13 +1,13 @@
 package com.expending.rules_engine.domain.config.bo;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class Between<T extends Comparable<T>> {
+@NoArgsConstructor
+@ToString
+public class BetweenBO<T extends Comparable<T>> {
     private T value1;
     private T value2;
 }
