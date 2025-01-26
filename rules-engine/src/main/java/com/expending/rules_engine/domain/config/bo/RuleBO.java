@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class RuleBO {
-    private String useInCalculation;
+    private String useCalculated;
     private TypeBO typeBO;
     private BetweenBO betweenBO;
     private String property;

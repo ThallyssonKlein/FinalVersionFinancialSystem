@@ -2,6 +2,7 @@ package com.expending.rules_engine.domain.config;
 
 import com.expending.rules_engine.domain.ConfigsForTransactionsBO;
 import com.expending.rules_engine.domain.PairBO;
+import com.expending.rules_engine.domain.config.bo.TypeBO;
 import com.expending.rules_engine.ports.outbound.database.SavedTransactionsRepository;
 import com.expending.rules_engine.domain.config.bo.BetweenBO;
 import com.expending.rules_engine.domain.config.bo.ConfigBO;
@@ -19,9 +20,6 @@ import java.util.*;
 public class ConfigService {
     private static final SimpleDateFormat FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
 
-    @Autowired
-    private SavedTransactionsRepository savedTransactionsRepository;
-
     public Object getFieldValue(Object obj, String fieldName) {
         try {
             Field field = obj.getClass().getDeclaredField(fieldName);
@@ -33,67 +31,47 @@ public class ConfigService {
         }
     }
 
-    public static String camelToSnake(String camelCase) {
-        return camelCase.replaceAll("([a-z])([A-Z]+)", "$1_$2").toLowerCase();
-    }
+    private boolean validateContains(Object contains, Object property) {
+        boolean shouldReturnConfig = false;
 
-    private BetweenBO<?> createBetweenInstance(String type, Object value1, Object value2) {
-        switch (type) {
-            case "NUMBER":
-                return new BetweenBO<>((Integer) value1, (Integer) value2);
-            case "DATE":
-                return new BetweenBO<>((Date) value1, (Date) value2);
-            case "STRING":
-                return new BetweenBO<>((String) value1, (String) value2);
-            default:
-                throw new IllegalArgumentException("Unsupported type: " + type);
+        if (!(property instanceof String)) {
+            return false;
         }
-    }
 
-    private boolean validateContains(RuleBO ruleBO, TransactionBO transactionBO, boolean shouldReturnConfig) {
-        if (ruleBO.getProperty() != null && ruleBO.getContains() != null) {
-            if (ruleBO.getContains() instanceof String) {
-                if (this.getFieldValue(transactionBO, ruleBO.getProperty()).toString().contains((String) ruleBO.getContains())) {
-                    shouldReturnConfig = true;
-                } else {
-                    shouldReturnConfig = false;
-                }
-            } else if (ruleBO.getContains() instanceof List) {
-                List<String> containsList = (List<String>) ruleBO.getContains();
-                for (String contains: containsList) {
-                    if (this.getFieldValue(transactionBO, ruleBO.getProperty()).toString().contains(contains)) {
-                        shouldReturnConfig = true;
-                    } else {
-                        shouldReturnConfig = false;
-                    }
+        if (contains instanceof String) {
+            shouldReturnConfig = ((String) property).contains((String) contains);
+        } else if (contains instanceof List<?> list) {
+            boolean containsAll = true;
+            if (!list.isEmpty() && list.getFirst() instanceof String) {
+                if (!((String) property).contains((String) list.getFirst())) {
+                    containsAll = false;
                 }
             }
+            shouldReturnConfig = containsAll;
         }
 
         return shouldReturnConfig;
     }
 
-    private boolean validateBetween(BetweenBO<?> betweenBO, RuleBO ruleBO, Object field, boolean shouldReturnConfig) {
+    private boolean validateBetween(BetweenBO<?> betweenBO, TypeBO typeBO, Object field) {
+        boolean shouldReturnConfig = false;
+
         if (betweenBO != null) {
-            switch (ruleBO.getTypeBO()) {
+            switch (typeBO) {
                 case NUMBER -> {
                     if ((Integer) field > (Integer) betweenBO.getValue1()
                             && (Integer) field < (Integer) betweenBO.getValue2()) {
                         shouldReturnConfig = true;
-                    } else {
-                        shouldReturnConfig = false;
                     }
                 }
                 case DATE -> {
                     if (((Date) field).after((Date) betweenBO.getValue1())
                             && ((Date) field).before((Date) betweenBO.getValue2())) {
                         shouldReturnConfig = true;
-                    } else {
-                        shouldReturnConfig = false;
                     }
                 }
                 case STRING -> {
-                    throw new IllegalArgumentException("Unsupported type: " + ruleBO.getTypeBO());
+                    throw new IllegalArgumentException("Unsupported type: " + typeBO);
                 }
             }
         }
@@ -102,50 +80,30 @@ public class ConfigService {
     }
 
     private boolean isConfigForThisTransaction(ConfigBO configBO, TransactionBO transactionBO) {
-        boolean shouldReturnConfig = false;
+        boolean allTrue = true;
         for (RuleBO ruleBO : configBO.getRuleBOS()) {
-            if (configBO.getUseCalculatedBO() != null) {
-                Object usedInCalculationFieldValue = this.getFieldValue(configBO.getUseCalculatedBO(), ruleBO.getUseInCalculation()) != null;
-                BetweenBO<?> betweenBO = this.createBetweenInstance(ruleBO.getTypeBO().name(), ruleBO.getBetweenBO().getValue1(), ruleBO.getBetweenBO().getValue2());
-                shouldReturnConfig = validateBetween(betweenBO, ruleBO, usedInCalculationFieldValue, shouldReturnConfig);
+            Object property;
+            if (ruleBO.getUseCalculated() != null) {
+                property = this.getFieldValue(transactionBO, ruleBO.getUseCalculated());
             } else {
-                BetweenBO<?> betweenBO = this.createBetweenInstance(ruleBO.getTypeBO().name(), ruleBO.getBetweenBO().getValue1(), ruleBO.getBetweenBO().getValue2());
-                shouldReturnConfig = validateBetween(betweenBO, ruleBO, this.getFieldValue(transactionBO, ruleBO.getProperty()), shouldReturnConfig);
+                property = this.getFieldValue(transactionBO, ruleBO.getProperty());
             }
 
-            shouldReturnConfig = validateContains(ruleBO, transactionBO, shouldReturnConfig);
+            if (!validateBetween(ruleBO.getBetweenBO(), ruleBO.getTypeBO(), property)) {
+                allTrue = false;
+            }
+            if (!validateContains(ruleBO, property)) {
+                allTrue = false;
+            }
 
             if (ruleBO.getEquals() != null) {
-                if (this.getFieldValue(transactionBO, ruleBO.getProperty()).equals(ruleBO.getEquals())) {
-                    shouldReturnConfig = true;
-                } else {
-                    shouldReturnConfig = false;
-                }
-            }
-
-            if (ruleBO.getFrequencyBO() != null) {
-                List<TransactionBO> transactionsFrequency = this.savedTransactionsRepository.findTransactionsInLastXFrequencyX(ruleBO.getFrequencyBO());
-                boolean isThisConfigCorrectForThisTransactionFrequency = false;
-                int searchedNumbers = 0;
-                for (TransactionBO transactionBOFrequency : transactionsFrequency) {
-                    if (ruleBO.getFrequencyBO().getTargetNumber() > 0 && searchedNumbers == ruleBO.getFrequencyBO().getTargetNumber()) {
-                        isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(configBO, transactionBOFrequency);
-                    } else if (ruleBO.getFrequencyBO().getTargetNumber() == 0) {
-                        isThisConfigCorrectForThisTransactionFrequency = this.isConfigForThisTransaction(configBO, transactionBOFrequency);
-                        break;
-                    }
-
-                    searchedNumbers += 1;
-                }
-                if (isThisConfigCorrectForThisTransactionFrequency) {
-                    shouldReturnConfig = true;
-                } else {
-                    shouldReturnConfig = false;
+                if (!property.equals(ruleBO.getEquals())) {
+                    allTrue = false;
                 }
             }
         }
 
-        return shouldReturnConfig;
+        return allTrue;
     }
 
     private PairBO findConfigPair(TransactionBO transactionBO, Map<String, List<TransactionBO>> transactionsGroupedByDateBO, ConfigBO configBO) {

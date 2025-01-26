@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 public class RuleDTO {
-    private String useInCalculation;
+    private String useCalculated;
     private TypeDTO type;
     private BetweenDTO between;
     private String property;

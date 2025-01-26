@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class UseCalculatedDTO {
+public class UseInCalculationDTO {
     private TimeDTO time;
     private BigDecimal values_average;
     private BigDecimal monthly_total;

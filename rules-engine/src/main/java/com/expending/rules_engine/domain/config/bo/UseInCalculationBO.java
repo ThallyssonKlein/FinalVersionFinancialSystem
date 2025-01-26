@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class UseCalculatedBO {
+public class UseInCalculationBO {
     private TimeBO timeBO;
     private BigDecimal values_average;
     private BigDecimal monthlyTotal;

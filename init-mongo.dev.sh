@@ -38,7 +38,7 @@ db.configs.insertMany([
     "name": "Club IFood Service",
     "rules": [
         {
-            "use_in_calculation": "values_average",
+            "use_calculated": "values_average",
             "type": "number",
             "between": {
                 "value1": 4,
