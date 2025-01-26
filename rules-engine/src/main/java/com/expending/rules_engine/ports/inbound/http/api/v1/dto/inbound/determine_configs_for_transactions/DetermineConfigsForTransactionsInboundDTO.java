@@ -16,5 +16,5 @@ public class DetermineConfigsForTransactionsInboundDTO {
     private ConfigDTO default_config;
     private List<ConfigDTO> configs;
     private List<TransactionDTO> transactions;
-    private List<Map<String, List<TransactionDTO>>> transactions_grouped_by_date;
+    private Map<String, List<TransactionDTO>> transactions_grouped_by_date;
 }

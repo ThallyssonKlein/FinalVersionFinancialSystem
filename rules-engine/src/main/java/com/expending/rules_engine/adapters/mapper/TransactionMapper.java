@@ -18,5 +18,5 @@ public interface TransactionMapper {
 
     List<TransactionBO> toTransactionBOList(List<TransactionDTO> transactionDTOList);
 
-    List<Map<String, List<TransactionBO>>> toTransactionBOMapList(List<Map<String, List<TransactionDTO>>> transactionDTOMapList);
+    Map<String, List<TransactionBO>> toTransactionBOMap(Map<String, List<TransactionDTO>> transactionDTOMapList);
 }

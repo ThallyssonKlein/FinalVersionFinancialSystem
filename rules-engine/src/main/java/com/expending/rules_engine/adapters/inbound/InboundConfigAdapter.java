@@ -27,7 +27,7 @@ public class InboundConfigAdapter {
                 configMapper.toConfigBO(determineConfigsForTransactionsInboundDTO.getDefault_config()),
                 configMapper.toConfigBOList(determineConfigsForTransactionsInboundDTO.getConfigs()),
                 transactionMapper.toTransactionBOList(determineConfigsForTransactionsInboundDTO.getTransactions()),
-                transactionMapper.toTransactionBOMapList(determineConfigsForTransactionsInboundDTO.getTransactions_grouped_by_date()));
+                transactionMapper.toTransactionBOMap(determineConfigsForTransactionsInboundDTO.getTransactions_grouped_by_date()));
 
         log.info("Configs for transactions determined");
 

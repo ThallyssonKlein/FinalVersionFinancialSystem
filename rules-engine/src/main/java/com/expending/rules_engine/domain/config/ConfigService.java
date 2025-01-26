@@ -148,46 +148,73 @@ public class ConfigService {
         return shouldReturnConfig;
     }
 
+    private PairBO findConfigPair(TransactionBO transactionBO, Map<String, List<TransactionBO>> transactionsGroupedByDateBO, ConfigBO configBO) {
+        Date currentDate = transactionBO.getDate();
+        List<TransactionBO> transactionBOS1 = transactionsGroupedByDateBO.get(FORMATTER.format(currentDate));
+        if (transactionBOS1 != null) {
+            for (TransactionBO pair : transactionBOS1) {
+                boolean isThisConfigCorrectForThisTransactionPair = this.isConfigForThisTransaction(configBO, pair);
+                if (isThisConfigCorrectForThisTransactionPair) {
+                    return new PairBO(
+                            configBO.getFindPairBO().getPairName(),
+                            configBO,
+                            Arrays.asList(transactionBO, pair)
+                    );
+                }
+            }
+        }
+
+        return null;
+    }
+
     public ConfigsForTransactionsBO determineConfigsForTransactions(ConfigBO defaultConfigBO, List<ConfigBO> configBOS,
                                                                     List<TransactionBO> transactionBOS,
-                                                                    List<Map<String, List<TransactionBO>>> transactionsGroupedByDateBO) {
+                                                                    Map<String, List<TransactionBO>> transactionsGroupedByDateBO) {
         Map<String, ConfigBO> configMap = new HashMap<>();
         List<PairBO> pairBOS = new ArrayList<>();
+
         for (TransactionBO transactionBO : transactionBOS) {
-            boolean puttedInTheMapOrPair = false;
+            List<ConfigBO> correctConfigs = new ArrayList<>();
             for (ConfigBO configBO : configBOS) {
                 boolean isThisConfigCorrectForThisTransaction = this.isConfigForThisTransaction(configBO, transactionBO);
+
                 if (isThisConfigCorrectForThisTransaction) {
-                    if (configBO.getFindPairBO() != null) {
-                        Date currentDate = transactionBO.getDate();
-                        if (transactionsGroupedByDateBO.getDate().equals(currentDate)) {
-                            for (TransactionBO pair : transactionsGroupedByDateBO.getTransactions()) {
-                                boolean isThisConfigCorrectForThisTransactionPair = this.isConfigForThisTransaction(configBO, pair);
-                                if (isThisConfigCorrectForThisTransactionPair) {
-                                    pairBOS.add(new PairBO(
-                                            configBO.getFindPairBO().getPairName(),
-                                            configBO,
-                                            Arrays.asList(transactionBO, pair)
-                                    ));
-                                    puttedInTheMapOrPair = true;
-                                }
-                            }
-                        }
-                    } else {
-                        configMap.put(transactionBO.getId(), configBO);
-                        puttedInTheMapOrPair = true;
-                    }
+                    correctConfigs.add(configBO);
                 }
             }
 
-            if (!puttedInTheMapOrPair) {
+            Optional<ConfigBO> correctConfig;
+            if (correctConfigs.size() > 1) {
+                correctConfig = correctConfigs.stream().reduce((first, second) -> {
+                    if (first.getRuleBOS().size() > second.getRuleBOS().size()) {
+                        return first;
+                    } else {
+                        return second;
+                    }
+                });
+            } else {
+                correctConfig = correctConfigs.stream().findFirst();
+            }
+
+            if (correctConfig.isEmpty()) {
                 configMap.put(transactionBO.getId(), defaultConfigBO);
+            } else {
+                if (correctConfig.get().getFindPairBO() != null) {
+                    PairBO pairBO = this.findConfigPair(transactionBO, transactionsGroupedByDateBO, correctConfig.get());
+                    if (pairBO != null) {
+                        pairBOS.add(pairBO);
+                    } else {
+                        configMap.put(transactionBO.getId(), defaultConfigBO);
+                    }
+                } else {
+                    configMap.put(transactionBO.getId(), correctConfig.get());
+                }
             }
         }
 
         return new ConfigsForTransactionsBO(
             configMap,
-                pairBOS
+            pairBOS
         );
     }
 }
