@@ -11,39 +11,86 @@ until mongosh --eval "db.adminCommand('ping')" >/dev/null 2>&1; do
   sleep 2
 done
 
-# echo "Inserindo mensagens aleatórias no banco de dados 'livetip'..."
-# mongosh <<EOF
-# use livetip;
+echo "Inserindo configs..."
+mongosh <<EOF
+use financial_system;
 
-# const senders = ['Alice', 'Bob', 'Charlie', 'Dave'];
-# const contents = ['Hello!', 'How are you?', 'Good morning!', 'Good night!'];
-# const currencies = ['BTC', 'BRL'];
+db.configs.insertMany([
+  {
+    "use": {
+        "category": "2 - Life Cost",
+        "subcategory": "2 - Services",
+        "default_name": "Club iFood",
+        "custom_name": false
+    },
+    "use_in_calculation": {
+        "reimbursement": 0,
+        "time": "1.0 months",
+        "values_average": 5
+    },
+    "display": {
+        "monthly_total": 5,
+        "next_buy_date": "2020-10-21",
+        "source": "source",
+        "amount": 1
+    },
+    "id": 1,
+    "name": "Club IFood Service",
+    "rules": [
+        {
+            "use_in_calculation": "values_average",
+            "type": "number",
+            "between": {
+                "value1": 4,
+                "value2": 7
+            }
+        },
+        {
+            "property": "name",
+            "type": "string",
+            "contains": "iFood"
+        }
+    ]
+  },
+  {
+    "use": {
+        "category": "1 - Compulsions",
+        "subcategory": "1 - Delivery",
+        "default_name": "Delivery",
+        "custom_name": false
+    },
+    "use_in_calculation": {
+        "reimbursement": 0,
+        "time": "0.5 week",
+        "values_average": 60
+    },
+    "display": {
+        "monthly_total": 2000,
+        "source": "source",
+        "amount": 1
+    },
+    "id": 30,
+    "name": "Delivery",
+    "rules": [
+        {
+            "property": "name",
+            "type": "string",
+            "contains": "iFood"
+        },
+        {
+            "property": "value",
+            "type": "number",
+            "between": {
+                "value1": 8,
+                "value2": 200
+            }
+     }
+    ]
+ }
+]);
 
-# // Função para gerar uma mensagem aleatória
-# const generateRandomMessage = () => {
-#     return {
-#         sender: senders[Math.floor(Math.random() * senders.length)],
-#         receiver: '2',
-#         content: contents[Math.floor(Math.random() * contents.length)],
-#         timestamp: new Date(),
-#         amount: Math.floor(Math.random() * 1000),
-#         paid: Math.random() < 0.5,
-#         currency: currencies[Math.floor(Math.random() * currencies.length)],
-#         paymentId: Math.random().toString(36).substring(7),
-#         read: Math.random() < 0.5
-#     };
-# };
-
-# // Gera e insere 10 mensagens aleatórias na coleção 'messages'
-# const messages = [];
-# for (let i = 0; i < 10; i++) {
-#     messages.push(generateRandomMessage());
-# }
-
-# db.messages.insertMany(messages);
-
-# print("10 mensagens inseridas no banco de dados 'livetip'.");
-# EOF
+print("10 mensagens inseridas no banco de dados 'livetip'.");
+EOF
 
 echo "Criando usuário para o banco de dados 'financial_system'..."
 mongosh <<EOF

@@ -1,8 +1,8 @@
 package com.expending.rules_engine.ports.inbound.http.api.v1.controllers;
 
 import com.expending.rules_engine.adapters.inbound.InboundConfigAdapter;
+import com.expending.rules_engine.ports.inbound.http.api.v1.dto.inbound.determine_configs_for_transactions.DetermineConfigsForTransactionsInboundDTO;
 import com.expending.rules_engine.ports.inbound.http.api.v1.dto.outbound.ConfigsForTransactionsOutboundDTO;
-import com.ports.inbound.http.api.v1.dto.inbound.determine_configs_for_transactions.DetermineConfigsForTransactionsInboundDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +23,7 @@ public class ConfigController {
 
     @GetMapping("/determine_configs_for_transactions")
     public ResponseEntity<ConfigsForTransactionsOutboundDTO> determine_configs_for_transactions(
-            @RequestBody @Valid  DetermineConfigsForTransactionsInboundDTO determineConfigsForTransactionsInboundDTO) {
+            @RequestBody @Valid DetermineConfigsForTransactionsInboundDTO determineConfigsForTransactionsInboundDTO) {
         log.info("Request received to determine configs for transactions");
 
         ConfigsForTransactionsOutboundDTO configsForTransactionsOutboundDTO = inboundConfigAdapter.determineConfigsForTransactions(determineConfigsForTransactionsInboundDTO);

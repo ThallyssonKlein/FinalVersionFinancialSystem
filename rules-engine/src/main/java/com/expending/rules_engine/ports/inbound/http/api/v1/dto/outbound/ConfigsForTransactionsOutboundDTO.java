@@ -21,6 +21,6 @@ class PairDTO {
 @Setter
 @AllArgsConstructor
 public class ConfigsForTransactionsOutboundDTO {
-    Map<String, Config> configTransactionAssociation;
+    Map<String, Config> config_transaction_association;
     List<PairDTO> pairBOS;
 }

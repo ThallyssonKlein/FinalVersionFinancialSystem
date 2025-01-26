@@ -1,0 +1,35 @@
+{
+    "use": {
+        "category": "1 - Compulsions",
+        "subcategory": "1 - Delivery",
+        "default_name": "Delivery",
+        "custom_name": false
+    },
+    "use_in_calculation": {
+        "reimbursement": 0,
+        "time": "0.5 week",
+        "values_average": 60
+    },
+    "display": {
+        "monthly_total": 2000,
+        "source": "source",
+        "amount": 1
+    },
+    "id": 30,
+    "name": "Delivery",
+    "rules": [
+        {
+            "property": "name",
+            "type": "string",
+            "contains": "iFood"
+        },
+        {
+            "property": "value",
+            "type": "number",
+            "between": {
+                "value1": 8,
+                "value2": 200
+            }
+     }
+    ]
+ }
