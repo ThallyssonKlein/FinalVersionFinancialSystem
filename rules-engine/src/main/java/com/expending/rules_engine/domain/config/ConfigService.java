@@ -3,14 +3,10 @@ package com.expending.rules_engine.domain.config;
 import com.expending.rules_engine.domain.ConfigsForTransactionsBO;
 import com.expending.rules_engine.domain.PairBO;
 import com.expending.rules_engine.ports.outbound.database.SavedTransactionsRepository;
-import com.expending.rules_engine.domain.TransactionsGroupedByDateBO;
 import com.expending.rules_engine.domain.config.bo.Between;
 import com.expending.rules_engine.domain.config.bo.Config;
 import com.expending.rules_engine.domain.config.bo.Rule;
 import com.expending.rules_engine.domain.transaction.bo.Transaction;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

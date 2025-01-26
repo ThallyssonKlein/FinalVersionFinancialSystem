@@ -1,11 +1,11 @@
 package com.expending.rules_engine.ports.inbound.http.api.v1.dto.inbound.determine_configs_for_transactions;
 
-import com.expending.rules_engine.domain.TransactionsGroupedByDateBO;
 import com.expending.rules_engine.domain.config.bo.Config;
 import com.expending.rules_engine.domain.transaction.bo.Transaction;
 import lombok.*;
 
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
@@ -16,5 +16,5 @@ public class DetermineConfigsForTransactionsInboundDTO {
     private Config default_config;
     private List<Config> configs;
     private List<Transaction> transactions;
-    private TransactionsGroupedByDateBO transactionsGroupedByDateBO;
+    private List<Map<String, List<Transaction>>> transactions_grouped_by_date;
 }
