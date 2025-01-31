@@ -1,0 +1,36 @@
+[
+{
+        "use": {
+                "category": "2 - Life Cost",
+                "subcategory": "2 - Services",
+                "default_name": "Club iFood",
+                "custom_name": false
+        },
+        "use_in_calculation": {
+                "reimbursement": 0,
+                "time": "1.0 months"
+        },
+        "display": {
+                "monthly_average": 5.99,
+                "next_buy_date": "2020-10-21",
+        },
+        "id": 1,
+        "name": "Club IFood Service",
+        "archived": false,
+        "rules": [
+                {
+                        "property": "value",
+                        "type": "number",
+                        "between": {
+                                "value1": 4,
+                                "value2": 7
+                        }
+                },
+                {
+                        "property": "name",
+                        "type": "string",
+                        "contains": "iFood"
+                }
+        ]
+    },
+]
