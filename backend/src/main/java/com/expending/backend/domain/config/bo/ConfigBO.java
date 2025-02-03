@@ -1,0 +1,20 @@
+package com.expending.backend.domain.config.bo;
+
+import lombok.*;
+
+import java.util.List;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class ConfigBO {
+    private Long id;
+    private String name;
+    private UseInCalculationBO useInCalculation;
+    private DisplayBO displayBO;
+    private List<RuleBO> ruleBOS;
+    private FindPairBO findPairBO;
+    private UseBO useBO;
+}
