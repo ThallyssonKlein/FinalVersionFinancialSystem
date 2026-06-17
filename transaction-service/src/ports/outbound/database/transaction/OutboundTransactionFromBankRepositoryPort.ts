@@ -8,26 +8,19 @@ export default class OutboundTransactionFromBankRepositoryPort {
     constructor(private database: Pool) {}
 
     async findTransactionsInLastXFrequencyX(userToken: IToken, frequency: IInboundFrequencyDTO): Promise<TransactionFromBankBO[]> {
-        let query: string = "SELECT description, type, value, date, user_token, id, custom_name FROM original_transactions WHERE date "
+        const unityMap: Record<EUnityDTO, string> = {
+            [EUnityDTO.DAY]: 'DAY',
+            [EUnityDTO.WEEK]: 'WEEK',
+            [EUnityDTO.MONTH]: 'MONTH',
+            [EUnityDTO.YEAR]: 'YEAR',
+        };
 
-        switch(frequency.unity) {
-            case EUnityDTO.DAY:
-                 query += "BETWEEN NOW() - INTERVAL " + frequency.value + " DAY AND NOW()";
-                 break;
-            case EUnityDTO.WEEK:
-                query += "BETWEEN NOW() - INTERVAL " + frequency.value + " WEEK AND NOW()";
-                break;
-            case EUnityDTO.MONTH:
-                query += "BETWEEN NOW() - INTERVAL " + frequency.value + " MONTH AND NOW()";
-                break;
-            case EUnityDTO.YEAR:
-                query += "BETWEEN NOW() - INTERVAL " + frequency.value + " YEAR AND NOW()";
-                break;
-        }
+        const unitySql = unityMap[frequency.unity];
+        if (!unitySql) return [];
 
-        query += " AND user_token = '" + userToken.value + "'";
+        const query = `SELECT description, type, value, date, user_token, id, custom_name FROM original_transactions WHERE date BETWEEN NOW() - ($1::int * INTERVAL '1 ${unitySql}') AND NOW() AND user_token = $2`;
 
-        return (await this.database.query(query)).rows as TransactionFromBankBO[]; 
+        return (await this.database.query(query, [frequency.value, userToken.value])).rows as TransactionFromBankBO[];
     }
 
     async saveTransaction(userToken: IToken, transaction: TransactionFromBankBO): Promise<TransactionFromBankBO> {
